@@ -1,0 +1,5537 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/visionmedia/consolidate.js#readme">consolidate (v0.14.5)</a>
+</h1>
+<h4>Template engine consolidation library</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.consolidate">module consolidate</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.consolidate.arc-templates">
+            function <span class="apidocSignatureSpan">consolidate.</span>arc-templates
+            <span class="apidocSignatureSpan">(path, options, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.consolidate.atpl">
+            function <span class="apidocSignatureSpan">consolidate.</span>atpl
+            <span class="apidocSignatureSpan">(path, options, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.consolidate.bracket">
+            function <span class="apidocSignatureSpan">consolidate.</span>bracket
+            <span class="apidocSignatureSpan">(path, options, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.consolidate.clearCache">
+            function <span class="apidocSignatureSpan">consolidate.</span>clearCache
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.consolidate.dot">
+            function <span class="apidocSignatureSpan">consolidate.</span>dot
+            <span class="apidocSignatureSpan">(path, options, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.consolidate.dust">
+            function <span class="apidocSignatureSpan">consolidate.</span>dust
+            <span class="apidocSignatureSpan">(path, options, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.consolidate.eco">
+            function <span class="apidocSignatureSpan">consolidate.</span>eco
+            <span class="apidocSignatureSpan">(path, options, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.consolidate.ect">
+            function <span class="apidocSignatureSpan">consolidate.</span>ect
+            <span class="apidocSignatureSpan">(path, options, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.consolidate.ejs">
+            function <span class="apidocSignatureSpan">consolidate.</span>ejs
+            <span class="apidocSignatureSpan">(path, options, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.consolidate.haml">
+            function <span class="apidocSignatureSpan">consolidate.</span>haml
+            <span class="apidocSignatureSpan">(path, options, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.consolidate.haml-coffee">
+            function <span class="apidocSignatureSpan">consolidate.</span>haml-coffee
+            <span class="apidocSignatureSpan">(path, options, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.consolidate.hamlet">
+            function <span class="apidocSignatureSpan">consolidate.</span>hamlet
+            <span class="apidocSignatureSpan">(path, options, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.consolidate.handlebars">
+            function <span class="apidocSignatureSpan">consolidate.</span>handlebars
+            <span class="apidocSignatureSpan">(path, options, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.consolidate.hogan">
+            function <span class="apidocSignatureSpan">consolidate.</span>hogan
+            <span class="apidocSignatureSpan">(path, options, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.consolidate.htmling">
+            function <span class="apidocSignatureSpan">consolidate.</span>htmling
+            <span class="apidocSignatureSpan">(path, options, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.consolidate.jade">
+            function <span class="apidocSignatureSpan">consolidate.</span>jade
+            <span class="apidocSignatureSpan">(path, options, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.consolidate.jazz">
+            function <span class="apidocSignatureSpan">consolidate.</span>jazz
+            <span class="apidocSignatureSpan">(path, options, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.consolidate.jqtpl">
+            function <span class="apidocSignatureSpan">consolidate.</span>jqtpl
+            <span class="apidocSignatureSpan">(path, options, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.consolidate.just">
+            function <span class="apidocSignatureSpan">consolidate.</span>just
+            <span class="apidocSignatureSpan">(path, options, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.consolidate.liquid">
+            function <span class="apidocSignatureSpan">consolidate.</span>liquid
+            <span class="apidocSignatureSpan">(path, options, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.consolidate.liquor">
+            function <span class="apidocSignatureSpan">consolidate.</span>liquor
+            <span class="apidocSignatureSpan">(path, options, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.consolidate.lodash">
+            function <span class="apidocSignatureSpan">consolidate.</span>lodash
+            <span class="apidocSignatureSpan">(path, options, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.consolidate.marko">
+            function <span class="apidocSignatureSpan">consolidate.</span>marko
+            <span class="apidocSignatureSpan">(path, options, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.consolidate.mote">
+            function <span class="apidocSignatureSpan">consolidate.</span>mote
+            <span class="apidocSignatureSpan">(path, options, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.consolidate.mustache">
+            function <span class="apidocSignatureSpan">consolidate.</span>mustache
+            <span class="apidocSignatureSpan">(path, options, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.consolidate.nunjucks">
+            function <span class="apidocSignatureSpan">consolidate.</span>nunjucks
+            <span class="apidocSignatureSpan">(path, options, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.consolidate.pug">
+            function <span class="apidocSignatureSpan">consolidate.</span>pug
+            <span class="apidocSignatureSpan">(path, options, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.consolidate.qejs">
+            function <span class="apidocSignatureSpan">consolidate.</span>qejs
+            <span class="apidocSignatureSpan">(path, options, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.consolidate.ractive">
+            function <span class="apidocSignatureSpan">consolidate.</span>ractive
+            <span class="apidocSignatureSpan">(path, options, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.consolidate.react">
+            function <span class="apidocSignatureSpan">consolidate.</span>react
+            <span class="apidocSignatureSpan">(str, options, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.consolidate.requireReact">
+            function <span class="apidocSignatureSpan">consolidate.</span>requireReact
+            <span class="apidocSignatureSpan">(module, filename)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.consolidate.slm">
+            function <span class="apidocSignatureSpan">consolidate.</span>slm
+            <span class="apidocSignatureSpan">(path, options, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.consolidate.swig">
+            function <span class="apidocSignatureSpan">consolidate.</span>swig
+            <span class="apidocSignatureSpan">(path, options, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.consolidate.templayed">
+            function <span class="apidocSignatureSpan">consolidate.</span>templayed
+            <span class="apidocSignatureSpan">(path, options, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.consolidate.toffee">
+            function <span class="apidocSignatureSpan">consolidate.</span>toffee
+            <span class="apidocSignatureSpan">(path, options, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.consolidate.twig">
+            function <span class="apidocSignatureSpan">consolidate.</span>twig
+            <span class="apidocSignatureSpan">(path, options, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.consolidate.underscore">
+            function <span class="apidocSignatureSpan">consolidate.</span>underscore
+            <span class="apidocSignatureSpan">(path, options, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.consolidate.vash">
+            function <span class="apidocSignatureSpan">consolidate.</span>vash
+            <span class="apidocSignatureSpan">(path, options, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.consolidate.walrus">
+            function <span class="apidocSignatureSpan">consolidate.</span>walrus
+            <span class="apidocSignatureSpan">(path, options, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.consolidate.whiskers">
+            function <span class="apidocSignatureSpan">consolidate.</span>whiskers
+            <span class="apidocSignatureSpan">(path, options, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">consolidate.</span>requires</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.consolidate.arc-templates">module consolidate.arc-templates</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.consolidate.arc-templates.arc-templates">
+            function <span class="apidocSignatureSpan">consolidate.</span>arc-templates
+            <span class="apidocSignatureSpan">(path, options, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.consolidate.arc-templates.render">
+            function <span class="apidocSignatureSpan">consolidate.arc-templates.</span>render
+            <span class="apidocSignatureSpan">(str, options, fn)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.consolidate.atpl">module consolidate.atpl</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.consolidate.atpl.atpl">
+            function <span class="apidocSignatureSpan">consolidate.</span>atpl
+            <span class="apidocSignatureSpan">(path, options, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.consolidate.atpl.render">
+            function <span class="apidocSignatureSpan">consolidate.atpl.</span>render
+            <span class="apidocSignatureSpan">(str, options, fn)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.consolidate.bracket">module consolidate.bracket</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.consolidate.bracket.bracket">
+            function <span class="apidocSignatureSpan">consolidate.</span>bracket
+            <span class="apidocSignatureSpan">(path, options, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.consolidate.bracket.render">
+            function <span class="apidocSignatureSpan">consolidate.bracket.</span>render
+            <span class="apidocSignatureSpan">(str, options, fn)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.consolidate.dot">module consolidate.dot</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.consolidate.dot.dot">
+            function <span class="apidocSignatureSpan">consolidate.</span>dot
+            <span class="apidocSignatureSpan">(path, options, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.consolidate.dot.render">
+            function <span class="apidocSignatureSpan">consolidate.dot.</span>render
+            <span class="apidocSignatureSpan">(str, options, fn)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.consolidate.dust">module consolidate.dust</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.consolidate.dust.dust">
+            function <span class="apidocSignatureSpan">consolidate.</span>dust
+            <span class="apidocSignatureSpan">(path, options, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.consolidate.dust.render">
+            function <span class="apidocSignatureSpan">consolidate.dust.</span>render
+            <span class="apidocSignatureSpan">(str, options, fn)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.consolidate.eco">module consolidate.eco</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.consolidate.eco.eco">
+            function <span class="apidocSignatureSpan">consolidate.</span>eco
+            <span class="apidocSignatureSpan">(path, options, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.consolidate.eco.render">
+            function <span class="apidocSignatureSpan">consolidate.eco.</span>render
+            <span class="apidocSignatureSpan">(str, options, fn)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.consolidate.ect">module consolidate.ect</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.consolidate.ect.ect">
+            function <span class="apidocSignatureSpan">consolidate.</span>ect
+            <span class="apidocSignatureSpan">(path, options, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.consolidate.ect.render">
+            function <span class="apidocSignatureSpan">consolidate.ect.</span>render
+            <span class="apidocSignatureSpan">(str, options, fn)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.consolidate.ejs">module consolidate.ejs</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.consolidate.ejs.ejs">
+            function <span class="apidocSignatureSpan">consolidate.</span>ejs
+            <span class="apidocSignatureSpan">(path, options, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.consolidate.ejs.render">
+            function <span class="apidocSignatureSpan">consolidate.ejs.</span>render
+            <span class="apidocSignatureSpan">(str, options, fn)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.consolidate.haml">module consolidate.haml</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.consolidate.haml.haml">
+            function <span class="apidocSignatureSpan">consolidate.</span>haml
+            <span class="apidocSignatureSpan">(path, options, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.consolidate.haml.render">
+            function <span class="apidocSignatureSpan">consolidate.haml.</span>render
+            <span class="apidocSignatureSpan">(str, options, fn)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.consolidate.haml-coffee">module consolidate.haml-coffee</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.consolidate.haml-coffee.haml-coffee">
+            function <span class="apidocSignatureSpan">consolidate.</span>haml-coffee
+            <span class="apidocSignatureSpan">(path, options, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.consolidate.haml-coffee.render">
+            function <span class="apidocSignatureSpan">consolidate.haml-coffee.</span>render
+            <span class="apidocSignatureSpan">(str, options, fn)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.consolidate.hamlet">module consolidate.hamlet</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.consolidate.hamlet.hamlet">
+            function <span class="apidocSignatureSpan">consolidate.</span>hamlet
+            <span class="apidocSignatureSpan">(path, options, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.consolidate.hamlet.render">
+            function <span class="apidocSignatureSpan">consolidate.hamlet.</span>render
+            <span class="apidocSignatureSpan">(str, options, fn)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.consolidate.handlebars">module consolidate.handlebars</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.consolidate.handlebars.handlebars">
+            function <span class="apidocSignatureSpan">consolidate.</span>handlebars
+            <span class="apidocSignatureSpan">(path, options, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.consolidate.handlebars.render">
+            function <span class="apidocSignatureSpan">consolidate.handlebars.</span>render
+            <span class="apidocSignatureSpan">(str, options, fn)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.consolidate.hogan">module consolidate.hogan</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.consolidate.hogan.hogan">
+            function <span class="apidocSignatureSpan">consolidate.</span>hogan
+            <span class="apidocSignatureSpan">(path, options, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.consolidate.hogan.render">
+            function <span class="apidocSignatureSpan">consolidate.hogan.</span>render
+            <span class="apidocSignatureSpan">(str, options, fn)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.consolidate.htmling">module consolidate.htmling</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.consolidate.htmling.htmling">
+            function <span class="apidocSignatureSpan">consolidate.</span>htmling
+            <span class="apidocSignatureSpan">(path, options, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.consolidate.htmling.render">
+            function <span class="apidocSignatureSpan">consolidate.htmling.</span>render
+            <span class="apidocSignatureSpan">(str, options, fn)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.consolidate.jade">module consolidate.jade</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.consolidate.jade.jade">
+            function <span class="apidocSignatureSpan">consolidate.</span>jade
+            <span class="apidocSignatureSpan">(path, options, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.consolidate.jade.render">
+            function <span class="apidocSignatureSpan">consolidate.jade.</span>render
+            <span class="apidocSignatureSpan">(str, options, fn)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.consolidate.jazz">module consolidate.jazz</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.consolidate.jazz.jazz">
+            function <span class="apidocSignatureSpan">consolidate.</span>jazz
+            <span class="apidocSignatureSpan">(path, options, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.consolidate.jazz.render">
+            function <span class="apidocSignatureSpan">consolidate.jazz.</span>render
+            <span class="apidocSignatureSpan">(str, options, fn)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.consolidate.jqtpl">module consolidate.jqtpl</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.consolidate.jqtpl.jqtpl">
+            function <span class="apidocSignatureSpan">consolidate.</span>jqtpl
+            <span class="apidocSignatureSpan">(path, options, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.consolidate.jqtpl.render">
+            function <span class="apidocSignatureSpan">consolidate.jqtpl.</span>render
+            <span class="apidocSignatureSpan">(str, options, fn)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.consolidate.just">module consolidate.just</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.consolidate.just.just">
+            function <span class="apidocSignatureSpan">consolidate.</span>just
+            <span class="apidocSignatureSpan">(path, options, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.consolidate.just.render">
+            function <span class="apidocSignatureSpan">consolidate.just.</span>render
+            <span class="apidocSignatureSpan">(str, options, fn)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.consolidate.liquid">module consolidate.liquid</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.consolidate.liquid.liquid">
+            function <span class="apidocSignatureSpan">consolidate.</span>liquid
+            <span class="apidocSignatureSpan">(path, options, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.consolidate.liquid.render">
+            function <span class="apidocSignatureSpan">consolidate.liquid.</span>render
+            <span class="apidocSignatureSpan">(str, options, fn)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.consolidate.liquor">module consolidate.liquor</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.consolidate.liquor.liquor">
+            function <span class="apidocSignatureSpan">consolidate.</span>liquor
+            <span class="apidocSignatureSpan">(path, options, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.consolidate.liquor.render">
+            function <span class="apidocSignatureSpan">consolidate.liquor.</span>render
+            <span class="apidocSignatureSpan">(str, options, fn)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.consolidate.lodash">module consolidate.lodash</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.consolidate.lodash.lodash">
+            function <span class="apidocSignatureSpan">consolidate.</span>lodash
+            <span class="apidocSignatureSpan">(path, options, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.consolidate.lodash.render">
+            function <span class="apidocSignatureSpan">consolidate.lodash.</span>render
+            <span class="apidocSignatureSpan">(str, options, fn)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.consolidate.marko">module consolidate.marko</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.consolidate.marko.marko">
+            function <span class="apidocSignatureSpan">consolidate.</span>marko
+            <span class="apidocSignatureSpan">(path, options, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.consolidate.marko.render">
+            function <span class="apidocSignatureSpan">consolidate.marko.</span>render
+            <span class="apidocSignatureSpan">(str, options, fn)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.consolidate.mote">module consolidate.mote</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.consolidate.mote.mote">
+            function <span class="apidocSignatureSpan">consolidate.</span>mote
+            <span class="apidocSignatureSpan">(path, options, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.consolidate.mote.render">
+            function <span class="apidocSignatureSpan">consolidate.mote.</span>render
+            <span class="apidocSignatureSpan">(str, options, fn)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.consolidate.mustache">module consolidate.mustache</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.consolidate.mustache.mustache">
+            function <span class="apidocSignatureSpan">consolidate.</span>mustache
+            <span class="apidocSignatureSpan">(path, options, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.consolidate.mustache.render">
+            function <span class="apidocSignatureSpan">consolidate.mustache.</span>render
+            <span class="apidocSignatureSpan">(str, options, fn)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.consolidate.nunjucks">module consolidate.nunjucks</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.consolidate.nunjucks.nunjucks">
+            function <span class="apidocSignatureSpan">consolidate.</span>nunjucks
+            <span class="apidocSignatureSpan">(path, options, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.consolidate.nunjucks.render">
+            function <span class="apidocSignatureSpan">consolidate.nunjucks.</span>render
+            <span class="apidocSignatureSpan">(str, options, fn)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.consolidate.pug">module consolidate.pug</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.consolidate.pug.pug">
+            function <span class="apidocSignatureSpan">consolidate.</span>pug
+            <span class="apidocSignatureSpan">(path, options, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.consolidate.pug.render">
+            function <span class="apidocSignatureSpan">consolidate.pug.</span>render
+            <span class="apidocSignatureSpan">(str, options, fn)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.consolidate.qejs">module consolidate.qejs</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.consolidate.qejs.qejs">
+            function <span class="apidocSignatureSpan">consolidate.</span>qejs
+            <span class="apidocSignatureSpan">(path, options, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.consolidate.qejs.render">
+            function <span class="apidocSignatureSpan">consolidate.qejs.</span>render
+            <span class="apidocSignatureSpan">(str, options, fn)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.consolidate.ractive">module consolidate.ractive</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.consolidate.ractive.ractive">
+            function <span class="apidocSignatureSpan">consolidate.</span>ractive
+            <span class="apidocSignatureSpan">(path, options, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.consolidate.ractive.render">
+            function <span class="apidocSignatureSpan">consolidate.ractive.</span>render
+            <span class="apidocSignatureSpan">(str, options, fn)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.consolidate.react">module consolidate.react</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.consolidate.react.react">
+            function <span class="apidocSignatureSpan">consolidate.</span>react
+            <span class="apidocSignatureSpan">(str, options, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.consolidate.react.render">
+            function <span class="apidocSignatureSpan">consolidate.react.</span>render
+            <span class="apidocSignatureSpan">(str, options, fn)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.consolidate.slm">module consolidate.slm</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.consolidate.slm.slm">
+            function <span class="apidocSignatureSpan">consolidate.</span>slm
+            <span class="apidocSignatureSpan">(path, options, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.consolidate.slm.render">
+            function <span class="apidocSignatureSpan">consolidate.slm.</span>render
+            <span class="apidocSignatureSpan">(str, options, fn)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.consolidate.swig">module consolidate.swig</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.consolidate.swig.swig">
+            function <span class="apidocSignatureSpan">consolidate.</span>swig
+            <span class="apidocSignatureSpan">(path, options, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.consolidate.swig.render">
+            function <span class="apidocSignatureSpan">consolidate.swig.</span>render
+            <span class="apidocSignatureSpan">(str, options, fn)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.consolidate.templayed">module consolidate.templayed</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.consolidate.templayed.templayed">
+            function <span class="apidocSignatureSpan">consolidate.</span>templayed
+            <span class="apidocSignatureSpan">(path, options, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.consolidate.templayed.render">
+            function <span class="apidocSignatureSpan">consolidate.templayed.</span>render
+            <span class="apidocSignatureSpan">(str, options, fn)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.consolidate.toffee">module consolidate.toffee</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.consolidate.toffee.toffee">
+            function <span class="apidocSignatureSpan">consolidate.</span>toffee
+            <span class="apidocSignatureSpan">(path, options, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.consolidate.toffee.render">
+            function <span class="apidocSignatureSpan">consolidate.toffee.</span>render
+            <span class="apidocSignatureSpan">(str, options, fn)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.consolidate.twig">module consolidate.twig</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.consolidate.twig.twig">
+            function <span class="apidocSignatureSpan">consolidate.</span>twig
+            <span class="apidocSignatureSpan">(path, options, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.consolidate.twig.render">
+            function <span class="apidocSignatureSpan">consolidate.twig.</span>render
+            <span class="apidocSignatureSpan">(str, options, fn)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.consolidate.underscore">module consolidate.underscore</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.consolidate.underscore.underscore">
+            function <span class="apidocSignatureSpan">consolidate.</span>underscore
+            <span class="apidocSignatureSpan">(path, options, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.consolidate.underscore.render">
+            function <span class="apidocSignatureSpan">consolidate.underscore.</span>render
+            <span class="apidocSignatureSpan">(str, options, fn)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.consolidate.vash">module consolidate.vash</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.consolidate.vash.vash">
+            function <span class="apidocSignatureSpan">consolidate.</span>vash
+            <span class="apidocSignatureSpan">(path, options, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.consolidate.vash.render">
+            function <span class="apidocSignatureSpan">consolidate.vash.</span>render
+            <span class="apidocSignatureSpan">(str, options, fn)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.consolidate.walrus">module consolidate.walrus</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.consolidate.walrus.walrus">
+            function <span class="apidocSignatureSpan">consolidate.</span>walrus
+            <span class="apidocSignatureSpan">(path, options, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.consolidate.walrus.render">
+            function <span class="apidocSignatureSpan">consolidate.walrus.</span>render
+            <span class="apidocSignatureSpan">(str, options, fn)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.consolidate.whiskers">module consolidate.whiskers</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.consolidate.whiskers.whiskers">
+            function <span class="apidocSignatureSpan">consolidate.</span>whiskers
+            <span class="apidocSignatureSpan">(path, options, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.consolidate.whiskers.render">
+            function <span class="apidocSignatureSpan">consolidate.whiskers.</span>render
+            <span class="apidocSignatureSpan">(str, options, fn)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.consolidate" id="apidoc.module.consolidate">module consolidate</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.consolidate.arc-templates" id="apidoc.element.consolidate.arc-templates">
+        function <span class="apidocSignatureSpan">consolidate.</span>arc-templates
+        <span class="apidocSignatureSpan">(path, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">arc-templates = function (path, options, fn){
+  options.filename = path;
+
+  return promisify(fn, function(fn) {
+    readPartials(path, options, function (err) {
+      if (err) return fn(err);
+      if (cache(options)) {
+        exports[name].render('', options, fn);
+      } else {
+        read(path, options, function(err, str){
+          if (err) return fn(err);
+          exports[name].render(str, options, fn);
+        });
+      }
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.consolidate.atpl" id="apidoc.element.consolidate.atpl">
+        function <span class="apidocSignatureSpan">consolidate.</span>atpl
+        <span class="apidocSignatureSpan">(path, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">atpl = function (path, options, fn){
+  options.filename = path;
+
+  return promisify(fn, function(fn) {
+    readPartials(path, options, function (err) {
+      if (err) return fn(err);
+      if (cache(options)) {
+        exports[name].render('', options, fn);
+      } else {
+        read(path, options, function(err, str){
+          if (err) return fn(err);
+          exports[name].render(str, options, fn);
+        });
+      }
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.consolidate.bracket" id="apidoc.element.consolidate.bracket">
+        function <span class="apidocSignatureSpan">consolidate.</span>bracket
+        <span class="apidocSignatureSpan">(path, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">bracket = function (path, options, fn){
+  options.filename = path;
+
+  return promisify(fn, function(fn) {
+    readPartials(path, options, function (err) {
+      if (err) return fn(err);
+      if (cache(options)) {
+        exports[name].render('', options, fn);
+      } else {
+        read(path, options, function(err, str){
+          if (err) return fn(err);
+          exports[name].render(str, options, fn);
+        });
+      }
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.consolidate.clearCache" id="apidoc.element.consolidate.clearCache">
+        function <span class="apidocSignatureSpan">consolidate.</span>clearCache
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">clearCache = function (){
+  cacheStore = {};
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.consolidate.dot" id="apidoc.element.consolidate.dot">
+        function <span class="apidocSignatureSpan">consolidate.</span>dot
+        <span class="apidocSignatureSpan">(path, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">dot = function (path, options, fn){
+  options.filename = path;
+
+  return promisify(fn, function(fn) {
+    readPartials(path, options, function (err) {
+      if (err) return fn(err);
+      if (cache(options)) {
+        exports[name].render('', options, fn);
+      } else {
+        read(path, options, function(err, str){
+          if (err) return fn(err);
+          exports[name].render(str, options, fn);
+        });
+      }
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.consolidate.dust" id="apidoc.element.consolidate.dust">
+        function <span class="apidocSignatureSpan">consolidate.</span>dust
+        <span class="apidocSignatureSpan">(path, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">dust = function (path, options, fn){
+  options.filename = path;
+
+  return promisify(fn, function(fn) {
+    readPartials(path, options, function (err) {
+      if (err) return fn(err);
+      if (cache(options)) {
+        exports[name].render('', options, fn);
+      } else {
+        read(path, options, function(err, str){
+          if (err) return fn(err);
+          exports[name].render(str, options, fn);
+        });
+      }
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.consolidate.eco" id="apidoc.element.consolidate.eco">
+        function <span class="apidocSignatureSpan">consolidate.</span>eco
+        <span class="apidocSignatureSpan">(path, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">eco = function (path, options, fn){
+  options.filename = path;
+
+  return promisify(fn, function(fn) {
+    readPartials(path, options, function (err) {
+      if (err) return fn(err);
+      if (cache(options)) {
+        exports[name].render('', options, fn);
+      } else {
+        read(path, options, function(err, str){
+          if (err) return fn(err);
+          exports[name].render(str, options, fn);
+        });
+      }
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.consolidate.ect" id="apidoc.element.consolidate.ect">
+        function <span class="apidocSignatureSpan">consolidate.</span>ect
+        <span class="apidocSignatureSpan">(path, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">ect = function (path, options, fn){
+  return promisify(fn, function (fn) {
+    var engine = requires.ect;
+    if (!engine) {
+      var ECT = require('ect');
+      engine = requires.ect = new ECT(options);
+    }
+    engine.configure({ cache: options.cache });
+    engine.render(path, options, fn);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.consolidate.ejs" id="apidoc.element.consolidate.ejs">
+        function <span class="apidocSignatureSpan">consolidate.</span>ejs
+        <span class="apidocSignatureSpan">(path, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">ejs = function (path, options, fn){
+  options.filename = path;
+
+  return promisify(fn, function(fn) {
+    readPartials(path, options, function (err) {
+      if (err) return fn(err);
+      if (cache(options)) {
+        exports[name].render('', options, fn);
+      } else {
+        read(path, options, function(err, str){
+          if (err) return fn(err);
+          exports[name].render(str, options, fn);
+        });
+      }
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.consolidate.haml" id="apidoc.element.consolidate.haml">
+        function <span class="apidocSignatureSpan">consolidate.</span>haml
+        <span class="apidocSignatureSpan">(path, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">haml = function (path, options, fn){
+  options.filename = path;
+
+  return promisify(fn, function(fn) {
+    readPartials(path, options, function (err) {
+      if (err) return fn(err);
+      if (cache(options)) {
+        exports[name].render('', options, fn);
+      } else {
+        read(path, options, function(err, str){
+          if (err) return fn(err);
+          exports[name].render(str, options, fn);
+        });
+      }
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.consolidate.haml-coffee" id="apidoc.element.consolidate.haml-coffee">
+        function <span class="apidocSignatureSpan">consolidate.</span>haml-coffee
+        <span class="apidocSignatureSpan">(path, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">haml-coffee = function (path, options, fn){
+  options.filename = path;
+
+  return promisify(fn, function(fn) {
+    readPartials(path, options, function (err) {
+      if (err) return fn(err);
+      if (cache(options)) {
+        exports[name].render('', options, fn);
+      } else {
+        read(path, options, function(err, str){
+          if (err) return fn(err);
+          exports[name].render(str, options, fn);
+        });
+      }
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.consolidate.hamlet" id="apidoc.element.consolidate.hamlet">
+        function <span class="apidocSignatureSpan">consolidate.</span>hamlet
+        <span class="apidocSignatureSpan">(path, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">hamlet = function (path, options, fn){
+  options.filename = path;
+
+  return promisify(fn, function(fn) {
+    readPartials(path, options, function (err) {
+      if (err) return fn(err);
+      if (cache(options)) {
+        exports[name].render('', options, fn);
+      } else {
+        read(path, options, function(err, str){
+          if (err) return fn(err);
+          exports[name].render(str, options, fn);
+        });
+      }
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.consolidate.handlebars" id="apidoc.element.consolidate.handlebars">
+        function <span class="apidocSignatureSpan">consolidate.</span>handlebars
+        <span class="apidocSignatureSpan">(path, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">handlebars = function (path, options, fn){
+  options.filename = path;
+
+  return promisify(fn, function(fn) {
+    readPartials(path, options, function (err) {
+      if (err) return fn(err);
+      if (cache(options)) {
+        exports[name].render('', options, fn);
+      } else {
+        read(path, options, function(err, str){
+          if (err) return fn(err);
+          exports[name].render(str, options, fn);
+        });
+      }
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.consolidate.hogan" id="apidoc.element.consolidate.hogan">
+        function <span class="apidocSignatureSpan">consolidate.</span>hogan
+        <span class="apidocSignatureSpan">(path, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">hogan = function (path, options, fn){
+  options.filename = path;
+
+  return promisify(fn, function(fn) {
+    readPartials(path, options, function (err) {
+      if (err) return fn(err);
+      if (cache(options)) {
+        exports[name].render('', options, fn);
+      } else {
+        read(path, options, function(err, str){
+          if (err) return fn(err);
+          exports[name].render(str, options, fn);
+        });
+      }
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.consolidate.htmling" id="apidoc.element.consolidate.htmling">
+        function <span class="apidocSignatureSpan">consolidate.</span>htmling
+        <span class="apidocSignatureSpan">(path, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">htmling = function (path, options, fn){
+  options.filename = path;
+
+  return promisify(fn, function(fn) {
+    readPartials(path, options, function (err) {
+      if (err) return fn(err);
+      if (cache(options)) {
+        exports[name].render('', options, fn);
+      } else {
+        read(path, options, function(err, str){
+          if (err) return fn(err);
+          exports[name].render(str, options, fn);
+        });
+      }
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.consolidate.jade" id="apidoc.element.consolidate.jade">
+        function <span class="apidocSignatureSpan">consolidate.</span>jade
+        <span class="apidocSignatureSpan">(path, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">jade = function (path, options, fn){
+  return promisify(fn, function (fn) {
+    var engine = requires.jade;
+    if (!engine) {
+      try {
+        engine = requires.jade = require('jade');
+      } catch (err) {
+        try {
+          engine = requires.jade = require('then-jade');
+        } catch (otherError) {
+          throw err;
+        }
+      }
+    }
+
+    try {
+      var tmpl = cache(options) || cache(options, engine.compileFile(path, options));
+      fn(null, tmpl(options));
+    } catch (err) {
+      fn(err);
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.consolidate.jazz" id="apidoc.element.consolidate.jazz">
+        function <span class="apidocSignatureSpan">consolidate.</span>jazz
+        <span class="apidocSignatureSpan">(path, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">jazz = function (path, options, fn){
+  options.filename = path;
+
+  return promisify(fn, function(fn) {
+    readPartials(path, options, function (err) {
+      if (err) return fn(err);
+      if (cache(options)) {
+        exports[name].render('', options, fn);
+      } else {
+        read(path, options, function(err, str){
+          if (err) return fn(err);
+          exports[name].render(str, options, fn);
+        });
+      }
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.consolidate.jqtpl" id="apidoc.element.consolidate.jqtpl">
+        function <span class="apidocSignatureSpan">consolidate.</span>jqtpl
+        <span class="apidocSignatureSpan">(path, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">jqtpl = function (path, options, fn){
+  options.filename = path;
+
+  return promisify(fn, function(fn) {
+    readPartials(path, options, function (err) {
+      if (err) return fn(err);
+      if (cache(options)) {
+        exports[name].render('', options, fn);
+      } else {
+        read(path, options, function(err, str){
+          if (err) return fn(err);
+          exports[name].render(str, options, fn);
+        });
+      }
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.consolidate.just" id="apidoc.element.consolidate.just">
+        function <span class="apidocSignatureSpan">consolidate.</span>just
+        <span class="apidocSignatureSpan">(path, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">just = function (path, options, fn){
+  return promisify(fn, function(fn) {
+    var engine = requires.just;
+    if (!engine) {
+      var JUST = require('just');
+      engine = requires.just = new JUST();
+    }
+    engine.configure({ useCache: options.cache });
+    engine.render(path, options, fn);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.consolidate.liquid" id="apidoc.element.consolidate.liquid">
+        function <span class="apidocSignatureSpan">consolidate.</span>liquid
+        <span class="apidocSignatureSpan">(path, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">liquid = function (path, options, fn){
+  options.filename = path;
+
+  return promisify(fn, function(fn) {
+    readPartials(path, options, function (err) {
+      if (err) return fn(err);
+      if (cache(options)) {
+        exports[name].render('', options, fn);
+      } else {
+        read(path, options, function(err, str){
+          if (err) return fn(err);
+          exports[name].render(str, options, fn);
+        });
+      }
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.consolidate.liquor" id="apidoc.element.consolidate.liquor">
+        function <span class="apidocSignatureSpan">consolidate.</span>liquor
+        <span class="apidocSignatureSpan">(path, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">liquor = function (path, options, fn){
+  options.filename = path;
+
+  return promisify(fn, function(fn) {
+    readPartials(path, options, function (err) {
+      if (err) return fn(err);
+      if (cache(options)) {
+        exports[name].render('', options, fn);
+      } else {
+        read(path, options, function(err, str){
+          if (err) return fn(err);
+          exports[name].render(str, options, fn);
+        });
+      }
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.consolidate.lodash" id="apidoc.element.consolidate.lodash">
+        function <span class="apidocSignatureSpan">consolidate.</span>lodash
+        <span class="apidocSignatureSpan">(path, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">lodash = function (path, options, fn){
+  options.filename = path;
+
+  return promisify(fn, function(fn) {
+    readPartials(path, options, function (err) {
+      if (err) return fn(err);
+      if (cache(options)) {
+        exports[name].render('', options, fn);
+      } else {
+        read(path, options, function(err, str){
+          if (err) return fn(err);
+          exports[name].render(str, options, fn);
+        });
+      }
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.consolidate.marko" id="apidoc.element.consolidate.marko">
+        function <span class="apidocSignatureSpan">consolidate.</span>marko
+        <span class="apidocSignatureSpan">(path, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">marko = function (path, options, fn){
+  return promisify(fn, function (fn) {
+    var engine = requires.marko || (requires.marko = require('marko'));
+    options.writeToDisk = !!options.cache;
+
+    try {
+      var tmpl = cache(options) || cache(options, engine.load(path, options));
+      tmpl.render(options, fn)
+    } catch (err) {
+      fn(err);
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.consolidate.mote" id="apidoc.element.consolidate.mote">
+        function <span class="apidocSignatureSpan">consolidate.</span>mote
+        <span class="apidocSignatureSpan">(path, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">mote = function (path, options, fn){
+  options.filename = path;
+
+  return promisify(fn, function(fn) {
+    readPartials(path, options, function (err) {
+      if (err) return fn(err);
+      if (cache(options)) {
+        exports[name].render('', options, fn);
+      } else {
+        read(path, options, function(err, str){
+          if (err) return fn(err);
+          exports[name].render(str, options, fn);
+        });
+      }
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.consolidate.mustache" id="apidoc.element.consolidate.mustache">
+        function <span class="apidocSignatureSpan">consolidate.</span>mustache
+        <span class="apidocSignatureSpan">(path, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">mustache = function (path, options, fn){
+  options.filename = path;
+
+  return promisify(fn, function(fn) {
+    readPartials(path, options, function (err) {
+      if (err) return fn(err);
+      if (cache(options)) {
+        exports[name].render('', options, fn);
+      } else {
+        read(path, options, function(err, str){
+          if (err) return fn(err);
+          exports[name].render(str, options, fn);
+        });
+      }
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.consolidate.nunjucks" id="apidoc.element.consolidate.nunjucks">
+        function <span class="apidocSignatureSpan">consolidate.</span>nunjucks
+        <span class="apidocSignatureSpan">(path, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">nunjucks = function (path, options, fn){
+  options.filename = path;
+
+  return promisify(fn, function(fn) {
+    readPartials(path, options, function (err) {
+      if (err) return fn(err);
+      if (cache(options)) {
+        exports[name].render('', options, fn);
+      } else {
+        read(path, options, function(err, str){
+          if (err) return fn(err);
+          exports[name].render(str, options, fn);
+        });
+      }
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.consolidate.pug" id="apidoc.element.consolidate.pug">
+        function <span class="apidocSignatureSpan">consolidate.</span>pug
+        <span class="apidocSignatureSpan">(path, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">pug = function (path, options, fn){
+  return promisify(fn, function (fn) {
+    var engine = requires.pug;
+    if (!engine) {
+      try {
+        engine = requires.pug = require('pug');
+      } catch (err) {
+        try {
+          engine = requires.pug = require('then-pug');
+        } catch (otherError) {
+          throw err;
+        }
+      }
+    }
+
+    try {
+      var tmpl = cache(options) || cache(options, engine.compileFile(path, options));
+      fn(null, tmpl(options));
+    } catch (err) {
+      fn(err);
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.consolidate.qejs" id="apidoc.element.consolidate.qejs">
+        function <span class="apidocSignatureSpan">consolidate.</span>qejs
+        <span class="apidocSignatureSpan">(path, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">qejs = function (path, options, fn){
+  options.filename = path;
+
+  return promisify(fn, function(fn) {
+    readPartials(path, options, function (err) {
+      if (err) return fn(err);
+      if (cache(options)) {
+        exports[name].render('', options, fn);
+      } else {
+        read(path, options, function(err, str){
+          if (err) return fn(err);
+          exports[name].render(str, options, fn);
+        });
+      }
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.consolidate.ractive" id="apidoc.element.consolidate.ractive">
+        function <span class="apidocSignatureSpan">consolidate.</span>ractive
+        <span class="apidocSignatureSpan">(path, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">ractive = function (path, options, fn){
+  options.filename = path;
+
+  return promisify(fn, function(fn) {
+    readPartials(path, options, function (err) {
+      if (err) return fn(err);
+      if (cache(options)) {
+        exports[name].render('', options, fn);
+      } else {
+        read(path, options, function(err, str){
+          if (err) return fn(err);
+          exports[name].render(str, options, fn);
+        });
+      }
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.consolidate.react" id="apidoc.element.consolidate.react">
+        function <span class="apidocSignatureSpan">consolidate.</span>react
+        <span class="apidocSignatureSpan">(str, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">react = function (str, options, fn) {
+  return promisify(fn, function(fn) {
+    // React Import
+    var ReactDOM = requires.ReactDOM || (requires.ReactDOM = require('react-dom/server'));
+    var react = requires.react || (requires.react = require('react'));
+
+    // Assign HTML Base
+    var base = options.base;
+    delete options.base;
+
+    var enableCache = options.cache;
+    delete options.cache;
+
+    var isNonStatic = options.isNonStatic;
+    delete options.isNonStatic;
+
+    // Start Conversion
+    try {
+
+      var Code;
+      var Factory;
+
+      var baseStr;
+      var content;
+      var parsed;
+
+      if (!cache(options)){
+        // Parsing
+        Code = (type === 'path') ? require(resolve(str)) : requireReactString(str);
+        Factory = cache(options, react.createFactory(Code));
+
+      } else {
+        Factory = cache(options);
+      }
+
+      parsed = new Factory(options);
+      content = (isNonStatic) ? ReactDOM.renderToString(parsed) : ReactDOM.renderToStaticMarkup(parsed);
+
+      if (base){
+        baseStr = readCache[str] || fs.readFileSync(resolve(base), 'utf8');
+
+        if (enableCache){
+          readCache[str] = baseStr;
+        }
+
+        options.content = content;
+        content = reactBaseTmpl(baseStr, options);
+      }
+
+      fn(null, content);
+
+    } catch (err) {
+      fn(err);
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.consolidate.requireReact" id="apidoc.element.consolidate.requireReact">
+        function <span class="apidocSignatureSpan">consolidate.</span>requireReact
+        <span class="apidocSignatureSpan">(module, filename)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function requireReact(module, filename) {
+  var babel = requires.babel || (requires.babel = require('babel-core'));
+
+  var compiled = babel.transformFileSync(filename, { presets: [ 'react' ] }).code
+
+  return module._compile(compiled, filename);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.consolidate.slm" id="apidoc.element.consolidate.slm">
+        function <span class="apidocSignatureSpan">consolidate.</span>slm
+        <span class="apidocSignatureSpan">(path, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">slm = function (path, options, fn){
+  options.filename = path;
+
+  return promisify(fn, function(fn) {
+    readPartials(path, options, function (err) {
+      if (err) return fn(err);
+      if (cache(options)) {
+        exports[name].render('', options, fn);
+      } else {
+        read(path, options, function(err, str){
+          if (err) return fn(err);
+          exports[name].render(str, options, fn);
+        });
+      }
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.consolidate.swig" id="apidoc.element.consolidate.swig">
+        function <span class="apidocSignatureSpan">consolidate.</span>swig
+        <span class="apidocSignatureSpan">(path, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">swig = function (path, options, fn){
+  options.filename = path;
+
+  return promisify(fn, function(fn) {
+    readPartials(path, options, function (err) {
+      if (err) return fn(err);
+      if (cache(options)) {
+        exports[name].render('', options, fn);
+      } else {
+        read(path, options, function(err, str){
+          if (err) return fn(err);
+          exports[name].render(str, options, fn);
+        });
+      }
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+All templates supported by this library may be rendered using the signature `(path[, locals], callback)` as shown below, which happens
+ to be the signature that Express 3.x supports so any of these engines may be used within Express.
+
+__NOTE__: All this example code uses cons.swig for the swig template engine. Replace swig with whatever templating you are using
+. For example, use cons.hogan for hogan.js, cons.jade for jade, etc. `console.log(cons)` for the full list of identifiers.
+
+```js
+var cons = require('consolidate');
+cons.<span class="apidocCodeKeywordSpan">swig</span>('views/page.html', { user: 'tobi' }, function(err, html
+){
+if (err) throw err;
+console.log(html);
+});
+```
+
+Or without options / local variables:
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.consolidate.templayed" id="apidoc.element.consolidate.templayed">
+        function <span class="apidocSignatureSpan">consolidate.</span>templayed
+        <span class="apidocSignatureSpan">(path, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">templayed = function (path, options, fn){
+  options.filename = path;
+
+  return promisify(fn, function(fn) {
+    readPartials(path, options, function (err) {
+      if (err) return fn(err);
+      if (cache(options)) {
+        exports[name].render('', options, fn);
+      } else {
+        read(path, options, function(err, str){
+          if (err) return fn(err);
+          exports[name].render(str, options, fn);
+        });
+      }
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.consolidate.toffee" id="apidoc.element.consolidate.toffee">
+        function <span class="apidocSignatureSpan">consolidate.</span>toffee
+        <span class="apidocSignatureSpan">(path, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toffee = function (path, options, fn){
+  return promisify(fn, function (fn) {
+    var toffee = requires.toffee || (requires.toffee = require('toffee'));
+    toffee.__consolidate_engine_render(path, options, fn);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.consolidate.twig" id="apidoc.element.consolidate.twig">
+        function <span class="apidocSignatureSpan">consolidate.</span>twig
+        <span class="apidocSignatureSpan">(path, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">twig = function (path, options, fn){
+  options.filename = path;
+
+  return promisify(fn, function(fn) {
+    readPartials(path, options, function (err) {
+      if (err) return fn(err);
+      if (cache(options)) {
+        exports[name].render('', options, fn);
+      } else {
+        read(path, options, function(err, str){
+          if (err) return fn(err);
+          exports[name].render(str, options, fn);
+        });
+      }
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.consolidate.underscore" id="apidoc.element.consolidate.underscore">
+        function <span class="apidocSignatureSpan">consolidate.</span>underscore
+        <span class="apidocSignatureSpan">(path, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">underscore = function (path, options, fn){
+  options.filename = path;
+
+  return promisify(fn, function(fn) {
+    readPartials(path, options, function (err) {
+      if (err) return fn(err);
+      if (cache(options)) {
+        exports[name].render('', options, fn);
+      } else {
+        read(path, options, function(err, str){
+          if (err) return fn(err);
+          exports[name].render(str, options, fn);
+        });
+      }
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.consolidate.vash" id="apidoc.element.consolidate.vash">
+        function <span class="apidocSignatureSpan">consolidate.</span>vash
+        <span class="apidocSignatureSpan">(path, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">vash = function (path, options, fn){
+  options.filename = path;
+
+  return promisify(fn, function(fn) {
+    readPartials(path, options, function (err) {
+      if (err) return fn(err);
+      if (cache(options)) {
+        exports[name].render('', options, fn);
+      } else {
+        read(path, options, function(err, str){
+          if (err) return fn(err);
+          exports[name].render(str, options, fn);
+        });
+      }
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.consolidate.walrus" id="apidoc.element.consolidate.walrus">
+        function <span class="apidocSignatureSpan">consolidate.</span>walrus
+        <span class="apidocSignatureSpan">(path, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">walrus = function (path, options, fn){
+  options.filename = path;
+
+  return promisify(fn, function(fn) {
+    readPartials(path, options, function (err) {
+      if (err) return fn(err);
+      if (cache(options)) {
+        exports[name].render('', options, fn);
+      } else {
+        read(path, options, function(err, str){
+          if (err) return fn(err);
+          exports[name].render(str, options, fn);
+        });
+      }
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.consolidate.whiskers" id="apidoc.element.consolidate.whiskers">
+        function <span class="apidocSignatureSpan">consolidate.</span>whiskers
+        <span class="apidocSignatureSpan">(path, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">whiskers = function (path, options, fn){
+  return promisify(fn, function (fn) {
+    var engine = requires.whiskers || (requires.whiskers = require('whiskers'));
+    engine.__express(path, options, fn);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.consolidate.arc-templates" id="apidoc.module.consolidate.arc-templates">module consolidate.arc-templates</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.consolidate.arc-templates.arc-templates" id="apidoc.element.consolidate.arc-templates.arc-templates">
+        function <span class="apidocSignatureSpan">consolidate.</span>arc-templates
+        <span class="apidocSignatureSpan">(path, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">arc-templates = function (path, options, fn){
+  options.filename = path;
+
+  return promisify(fn, function(fn) {
+    readPartials(path, options, function (err) {
+      if (err) return fn(err);
+      if (cache(options)) {
+        exports[name].render('', options, fn);
+      } else {
+        read(path, options, function(err, str){
+          if (err) return fn(err);
+          exports[name].render(str, options, fn);
+        });
+      }
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.consolidate.arc-templates.render" id="apidoc.element.consolidate.arc-templates.render">
+        function <span class="apidocSignatureSpan">consolidate.arc-templates.</span>render
+        <span class="apidocSignatureSpan">(str, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">render = function (str, options, fn) {
+  var readFileWithOptions = Promise.promisify(read);
+  var consolidateFileSystem = {};
+  consolidateFileSystem.readFile = function (path) {
+    return readFileWithOptions(path, options);
+  };
+
+  return promisify(fn, function (fn) {
+    try {
+      var engine = requires['arc-templates'];
+      if (!engine) {
+        var Engine = require('arc-templates/dist/es5');
+        engine = requires['arc-templates'] = new Engine({ filesystem: consolidateFileSystem });
+      }
+
+      var compiler = cache(options) || cache(options, engine.compileString(str, options.filename));
+      compiler.then(function (func) { return func(options); })
+          .then(function (result) { fn(null, result.content); })
+          .catch(fn);
+    } catch (err) {
+      fn(err);
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+var users = [];
+users.push({ name: 'tobi' });
+users.push({ name: 'loki' });
+users.push({ name: 'jane' });
+
+app.get('/', function(req, res){
+res.<span class="apidocCodeKeywordSpan">render</span>('index', {
+  title: 'Consolidate.js'
+});
+});
+
+app.get('/users', function(req, res){
+res.render('users', {
+  title: 'Users',
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.consolidate.atpl" id="apidoc.module.consolidate.atpl">module consolidate.atpl</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.consolidate.atpl.atpl" id="apidoc.element.consolidate.atpl.atpl">
+        function <span class="apidocSignatureSpan">consolidate.</span>atpl
+        <span class="apidocSignatureSpan">(path, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">atpl = function (path, options, fn){
+  options.filename = path;
+
+  return promisify(fn, function(fn) {
+    readPartials(path, options, function (err) {
+      if (err) return fn(err);
+      if (cache(options)) {
+        exports[name].render('', options, fn);
+      } else {
+        read(path, options, function(err, str){
+          if (err) return fn(err);
+          exports[name].render(str, options, fn);
+        });
+      }
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.consolidate.atpl.render" id="apidoc.element.consolidate.atpl.render">
+        function <span class="apidocSignatureSpan">consolidate.atpl.</span>render
+        <span class="apidocSignatureSpan">(str, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">render = function (str, options, fn){
+  return promisify(fn, function(fn) {
+    var engine = requires.atpl || (requires.atpl = require('atpl'));
+    try {
+      var tmpl = cache(options) || cache(options, engine.compile(str, options));
+      fn(null, tmpl(options));
+    } catch (err) {
+      fn(err);
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+var users = [];
+users.push({ name: 'tobi' });
+users.push({ name: 'loki' });
+users.push({ name: 'jane' });
+
+app.get('/', function(req, res){
+res.<span class="apidocCodeKeywordSpan">render</span>('index', {
+  title: 'Consolidate.js'
+});
+});
+
+app.get('/users', function(req, res){
+res.render('users', {
+  title: 'Users',
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.consolidate.bracket" id="apidoc.module.consolidate.bracket">module consolidate.bracket</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.consolidate.bracket.bracket" id="apidoc.element.consolidate.bracket.bracket">
+        function <span class="apidocSignatureSpan">consolidate.</span>bracket
+        <span class="apidocSignatureSpan">(path, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">bracket = function (path, options, fn){
+  options.filename = path;
+
+  return promisify(fn, function(fn) {
+    readPartials(path, options, function (err) {
+      if (err) return fn(err);
+      if (cache(options)) {
+        exports[name].render('', options, fn);
+      } else {
+        read(path, options, function(err, str){
+          if (err) return fn(err);
+          exports[name].render(str, options, fn);
+        });
+      }
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.consolidate.bracket.render" id="apidoc.element.consolidate.bracket.render">
+        function <span class="apidocSignatureSpan">consolidate.bracket.</span>render
+        <span class="apidocSignatureSpan">(str, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">render = function (str, options, fn) {
+  return promisify(fn, function (fn) {
+    var engine = requires.bracket || (requires.bracket = require('bracket-template'));
+    try {
+      var tmpl = cache(options) || cache(options, engine.default.compile(str));
+      fn(null, tmpl(options));
+    } catch (err) {
+      fn(err);
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+var users = [];
+users.push({ name: 'tobi' });
+users.push({ name: 'loki' });
+users.push({ name: 'jane' });
+
+app.get('/', function(req, res){
+res.<span class="apidocCodeKeywordSpan">render</span>('index', {
+  title: 'Consolidate.js'
+});
+});
+
+app.get('/users', function(req, res){
+res.render('users', {
+  title: 'Users',
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.consolidate.dot" id="apidoc.module.consolidate.dot">module consolidate.dot</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.consolidate.dot.dot" id="apidoc.element.consolidate.dot.dot">
+        function <span class="apidocSignatureSpan">consolidate.</span>dot
+        <span class="apidocSignatureSpan">(path, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">dot = function (path, options, fn){
+  options.filename = path;
+
+  return promisify(fn, function(fn) {
+    readPartials(path, options, function (err) {
+      if (err) return fn(err);
+      if (cache(options)) {
+        exports[name].render('', options, fn);
+      } else {
+        read(path, options, function(err, str){
+          if (err) return fn(err);
+          exports[name].render(str, options, fn);
+        });
+      }
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.consolidate.dot.render" id="apidoc.element.consolidate.dot.render">
+        function <span class="apidocSignatureSpan">consolidate.dot.</span>render
+        <span class="apidocSignatureSpan">(str, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">render = function (str, options, fn) {
+  return promisify(fn, function (fn) {
+    var engine = requires.dot || (requires.dot = require('dot'));
+    try {
+      var tmpl = cache(options) || cache(options, engine.compile(str, options &amp;&amp; options._def));
+      fn(null, tmpl(options));
+    } catch (err) {
+      fn(err);
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+var users = [];
+users.push({ name: 'tobi' });
+users.push({ name: 'loki' });
+users.push({ name: 'jane' });
+
+app.get('/', function(req, res){
+res.<span class="apidocCodeKeywordSpan">render</span>('index', {
+  title: 'Consolidate.js'
+});
+});
+
+app.get('/users', function(req, res){
+res.render('users', {
+  title: 'Users',
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.consolidate.dust" id="apidoc.module.consolidate.dust">module consolidate.dust</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.consolidate.dust.dust" id="apidoc.element.consolidate.dust.dust">
+        function <span class="apidocSignatureSpan">consolidate.</span>dust
+        <span class="apidocSignatureSpan">(path, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">dust = function (path, options, fn){
+  options.filename = path;
+
+  return promisify(fn, function(fn) {
+    readPartials(path, options, function (err) {
+      if (err) return fn(err);
+      if (cache(options)) {
+        exports[name].render('', options, fn);
+      } else {
+        read(path, options, function(err, str){
+          if (err) return fn(err);
+          exports[name].render(str, options, fn);
+        });
+      }
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.consolidate.dust.render" id="apidoc.element.consolidate.dust.render">
+        function <span class="apidocSignatureSpan">consolidate.dust.</span>render
+        <span class="apidocSignatureSpan">(str, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">render = function (str, options, fn){
+  return promisify(fn, function(fn) {
+    var engine = requires.dust;
+    if (!engine) {
+      try {
+        engine = requires.dust = require('dust');
+      } catch (err) {
+        try {
+          engine = requires.dust = require('dustjs-helpers');
+        } catch (err) {
+          engine = requires.dust = require('dustjs-linkedin');
+        }
+      }
+    }
+
+    var ext = 'dust';
+    var views = '.';
+
+    if (options) {
+      if (options.ext) ext = options.ext;
+      if (options.views) views = options.views;
+      if (options.settings &amp;&amp; options.settings.views) views = options.settings.views;
+    }
+    if (!options || (options &amp;&amp; !options.cache)) engine.cache = {};
+
+    engine.onLoad = function(path, callback){
+      if ('' === extname(path)) path += '.' + ext;
+      if ('/' !== path[0]) path = views + '/' + path;
+      read(path, options, callback);
+    };
+
+    try {
+      var tmpl = cache(options) || cache(options, engine.compileFn(str));
+      tmpl(options, fn);
+    } catch (err) {
+      fn(err);
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+var users = [];
+users.push({ name: 'tobi' });
+users.push({ name: 'loki' });
+users.push({ name: 'jane' });
+
+app.get('/', function(req, res){
+res.<span class="apidocCodeKeywordSpan">render</span>('index', {
+  title: 'Consolidate.js'
+});
+});
+
+app.get('/users', function(req, res){
+res.render('users', {
+  title: 'Users',
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.consolidate.eco" id="apidoc.module.consolidate.eco">module consolidate.eco</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.consolidate.eco.eco" id="apidoc.element.consolidate.eco.eco">
+        function <span class="apidocSignatureSpan">consolidate.</span>eco
+        <span class="apidocSignatureSpan">(path, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">eco = function (path, options, fn){
+  options.filename = path;
+
+  return promisify(fn, function(fn) {
+    readPartials(path, options, function (err) {
+      if (err) return fn(err);
+      if (cache(options)) {
+        exports[name].render('', options, fn);
+      } else {
+        read(path, options, function(err, str){
+          if (err) return fn(err);
+          exports[name].render(str, options, fn);
+        });
+      }
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.consolidate.eco.render" id="apidoc.element.consolidate.eco.render">
+        function <span class="apidocSignatureSpan">consolidate.eco.</span>render
+        <span class="apidocSignatureSpan">(str, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">render = function (str, options, fn){
+  return promisify(fn, function(fn) {
+    var engine = requires.eco || (requires.eco = require('eco'));
+    try {
+      fn(null, engine.render(str, options));
+    } catch (err) {
+      fn(err);
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+var users = [];
+users.push({ name: 'tobi' });
+users.push({ name: 'loki' });
+users.push({ name: 'jane' });
+
+app.get('/', function(req, res){
+res.<span class="apidocCodeKeywordSpan">render</span>('index', {
+  title: 'Consolidate.js'
+});
+});
+
+app.get('/users', function(req, res){
+res.render('users', {
+  title: 'Users',
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.consolidate.ect" id="apidoc.module.consolidate.ect">module consolidate.ect</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.consolidate.ect.ect" id="apidoc.element.consolidate.ect.ect">
+        function <span class="apidocSignatureSpan">consolidate.</span>ect
+        <span class="apidocSignatureSpan">(path, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">ect = function (path, options, fn){
+  return promisify(fn, function (fn) {
+    var engine = requires.ect;
+    if (!engine) {
+      var ECT = require('ect');
+      engine = requires.ect = new ECT(options);
+    }
+    engine.configure({ cache: options.cache });
+    engine.render(path, options, fn);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.consolidate.ect.render" id="apidoc.element.consolidate.ect.render">
+        function <span class="apidocSignatureSpan">consolidate.ect.</span>render
+        <span class="apidocSignatureSpan">(str, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">render = function (str, options, fn){
+  return promisify(fn, function (fn) {
+    var ECT = require('ect');
+    var engine = new ECT({ root: { page: str }});
+    engine.render('page', options, fn);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+var users = [];
+users.push({ name: 'tobi' });
+users.push({ name: 'loki' });
+users.push({ name: 'jane' });
+
+app.get('/', function(req, res){
+res.<span class="apidocCodeKeywordSpan">render</span>('index', {
+  title: 'Consolidate.js'
+});
+});
+
+app.get('/users', function(req, res){
+res.render('users', {
+  title: 'Users',
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.consolidate.ejs" id="apidoc.module.consolidate.ejs">module consolidate.ejs</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.consolidate.ejs.ejs" id="apidoc.element.consolidate.ejs.ejs">
+        function <span class="apidocSignatureSpan">consolidate.</span>ejs
+        <span class="apidocSignatureSpan">(path, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">ejs = function (path, options, fn){
+  options.filename = path;
+
+  return promisify(fn, function(fn) {
+    readPartials(path, options, function (err) {
+      if (err) return fn(err);
+      if (cache(options)) {
+        exports[name].render('', options, fn);
+      } else {
+        read(path, options, function(err, str){
+          if (err) return fn(err);
+          exports[name].render(str, options, fn);
+        });
+      }
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.consolidate.ejs.render" id="apidoc.element.consolidate.ejs.render">
+        function <span class="apidocSignatureSpan">consolidate.ejs.</span>render
+        <span class="apidocSignatureSpan">(str, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">render = function (str, options, fn){
+  return promisify(fn, function (fn) {
+    var engine = requires.ejs || (requires.ejs = require('ejs'));
+    try {
+      var tmpl = cache(options) || cache(options, engine.compile(str, options));
+      fn(null, tmpl(options));
+    } catch (err) {
+      fn(err);
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+var users = [];
+users.push({ name: 'tobi' });
+users.push({ name: 'loki' });
+users.push({ name: 'jane' });
+
+app.get('/', function(req, res){
+res.<span class="apidocCodeKeywordSpan">render</span>('index', {
+  title: 'Consolidate.js'
+});
+});
+
+app.get('/users', function(req, res){
+res.render('users', {
+  title: 'Users',
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.consolidate.haml" id="apidoc.module.consolidate.haml">module consolidate.haml</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.consolidate.haml.haml" id="apidoc.element.consolidate.haml.haml">
+        function <span class="apidocSignatureSpan">consolidate.</span>haml
+        <span class="apidocSignatureSpan">(path, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">haml = function (path, options, fn){
+  options.filename = path;
+
+  return promisify(fn, function(fn) {
+    readPartials(path, options, function (err) {
+      if (err) return fn(err);
+      if (cache(options)) {
+        exports[name].render('', options, fn);
+      } else {
+        read(path, options, function(err, str){
+          if (err) return fn(err);
+          exports[name].render(str, options, fn);
+        });
+      }
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.consolidate.haml.render" id="apidoc.element.consolidate.haml.render">
+        function <span class="apidocSignatureSpan">consolidate.haml.</span>render
+        <span class="apidocSignatureSpan">(str, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">render = function (str, options, fn){
+  return promisify(fn, function(fn) {
+    var engine = requires.haml || (requires.haml = require('hamljs'));
+    try {
+      options.locals = options;
+      fn(null, engine.render(str, options).trimLeft());
+    } catch (err) {
+      fn(err);
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+var users = [];
+users.push({ name: 'tobi' });
+users.push({ name: 'loki' });
+users.push({ name: 'jane' });
+
+app.get('/', function(req, res){
+res.<span class="apidocCodeKeywordSpan">render</span>('index', {
+  title: 'Consolidate.js'
+});
+});
+
+app.get('/users', function(req, res){
+res.render('users', {
+  title: 'Users',
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.consolidate.haml-coffee" id="apidoc.module.consolidate.haml-coffee">module consolidate.haml-coffee</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.consolidate.haml-coffee.haml-coffee" id="apidoc.element.consolidate.haml-coffee.haml-coffee">
+        function <span class="apidocSignatureSpan">consolidate.</span>haml-coffee
+        <span class="apidocSignatureSpan">(path, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">haml-coffee = function (path, options, fn){
+  options.filename = path;
+
+  return promisify(fn, function(fn) {
+    readPartials(path, options, function (err) {
+      if (err) return fn(err);
+      if (cache(options)) {
+        exports[name].render('', options, fn);
+      } else {
+        read(path, options, function(err, str){
+          if (err) return fn(err);
+          exports[name].render(str, options, fn);
+        });
+      }
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.consolidate.haml-coffee.render" id="apidoc.element.consolidate.haml-coffee.render">
+        function <span class="apidocSignatureSpan">consolidate.haml-coffee.</span>render
+        <span class="apidocSignatureSpan">(str, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">render = function (str, options, fn){
+  return promisify(fn, function(fn) {
+    var engine = requires['haml-coffee'] || (requires['haml-coffee'] = require('haml-coffee'));
+    try {
+      var tmpl = cache(options) || cache(options, engine.compile(str, options));
+      fn(null, tmpl(options));
+    } catch (err) {
+      fn(err);
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+var users = [];
+users.push({ name: 'tobi' });
+users.push({ name: 'loki' });
+users.push({ name: 'jane' });
+
+app.get('/', function(req, res){
+res.<span class="apidocCodeKeywordSpan">render</span>('index', {
+  title: 'Consolidate.js'
+});
+});
+
+app.get('/users', function(req, res){
+res.render('users', {
+  title: 'Users',
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.consolidate.hamlet" id="apidoc.module.consolidate.hamlet">module consolidate.hamlet</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.consolidate.hamlet.hamlet" id="apidoc.element.consolidate.hamlet.hamlet">
+        function <span class="apidocSignatureSpan">consolidate.</span>hamlet
+        <span class="apidocSignatureSpan">(path, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">hamlet = function (path, options, fn){
+  options.filename = path;
+
+  return promisify(fn, function(fn) {
+    readPartials(path, options, function (err) {
+      if (err) return fn(err);
+      if (cache(options)) {
+        exports[name].render('', options, fn);
+      } else {
+        read(path, options, function(err, str){
+          if (err) return fn(err);
+          exports[name].render(str, options, fn);
+        });
+      }
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.consolidate.hamlet.render" id="apidoc.element.consolidate.hamlet.render">
+        function <span class="apidocSignatureSpan">consolidate.hamlet.</span>render
+        <span class="apidocSignatureSpan">(str, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">render = function (str, options, fn){
+  return promisify(fn, function (fn) {
+    var engine = requires.hamlet || (requires.hamlet = require('hamlet'));
+    try {
+      options.locals = options;
+      fn(null, engine.render(str, options).trimLeft());
+    } catch (err) {
+      fn(err);
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+var users = [];
+users.push({ name: 'tobi' });
+users.push({ name: 'loki' });
+users.push({ name: 'jane' });
+
+app.get('/', function(req, res){
+res.<span class="apidocCodeKeywordSpan">render</span>('index', {
+  title: 'Consolidate.js'
+});
+});
+
+app.get('/users', function(req, res){
+res.render('users', {
+  title: 'Users',
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.consolidate.handlebars" id="apidoc.module.consolidate.handlebars">module consolidate.handlebars</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.consolidate.handlebars.handlebars" id="apidoc.element.consolidate.handlebars.handlebars">
+        function <span class="apidocSignatureSpan">consolidate.</span>handlebars
+        <span class="apidocSignatureSpan">(path, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">handlebars = function (path, options, fn){
+  options.filename = path;
+
+  return promisify(fn, function(fn) {
+    readPartials(path, options, function (err) {
+      if (err) return fn(err);
+      if (cache(options)) {
+        exports[name].render('', options, fn);
+      } else {
+        read(path, options, function(err, str){
+          if (err) return fn(err);
+          exports[name].render(str, options, fn);
+        });
+      }
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.consolidate.handlebars.render" id="apidoc.element.consolidate.handlebars.render">
+        function <span class="apidocSignatureSpan">consolidate.handlebars.</span>render
+        <span class="apidocSignatureSpan">(str, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">render = function (str, options, fn) {
+  return promisify(fn, function(fn) {
+    var engine = requires.handlebars || (requires.handlebars = require('handlebars'));
+    try {
+      for (var partial in options.partials) {
+        engine.registerPartial(partial, options.partials[partial]);
+      }
+      for (var helper in options.helpers) {
+        engine.registerHelper(helper, options.helpers[helper]);
+      }
+      var tmpl = cache(options) || cache(options, engine.compile(str, options));
+      fn(null, tmpl(options));
+    } catch (err) {
+      fn(err);
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+var users = [];
+users.push({ name: 'tobi' });
+users.push({ name: 'loki' });
+users.push({ name: 'jane' });
+
+app.get('/', function(req, res){
+res.<span class="apidocCodeKeywordSpan">render</span>('index', {
+  title: 'Consolidate.js'
+});
+});
+
+app.get('/users', function(req, res){
+res.render('users', {
+  title: 'Users',
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.consolidate.hogan" id="apidoc.module.consolidate.hogan">module consolidate.hogan</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.consolidate.hogan.hogan" id="apidoc.element.consolidate.hogan.hogan">
+        function <span class="apidocSignatureSpan">consolidate.</span>hogan
+        <span class="apidocSignatureSpan">(path, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">hogan = function (path, options, fn){
+  options.filename = path;
+
+  return promisify(fn, function(fn) {
+    readPartials(path, options, function (err) {
+      if (err) return fn(err);
+      if (cache(options)) {
+        exports[name].render('', options, fn);
+      } else {
+        read(path, options, function(err, str){
+          if (err) return fn(err);
+          exports[name].render(str, options, fn);
+        });
+      }
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.consolidate.hogan.render" id="apidoc.element.consolidate.hogan.render">
+        function <span class="apidocSignatureSpan">consolidate.hogan.</span>render
+        <span class="apidocSignatureSpan">(str, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">render = function (str, options, fn){
+  return promisify(fn, function (fn) {
+    var engine = requires.hogan || (requires.hogan = require('hogan.js'));
+    try {
+      var tmpl = cache(options) || cache(options, engine.compile(str, options));
+      fn(null, tmpl.render(options, options.partials));
+    } catch (err) {
+      fn(err);
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+var users = [];
+users.push({ name: 'tobi' });
+users.push({ name: 'loki' });
+users.push({ name: 'jane' });
+
+app.get('/', function(req, res){
+res.<span class="apidocCodeKeywordSpan">render</span>('index', {
+  title: 'Consolidate.js'
+});
+});
+
+app.get('/users', function(req, res){
+res.render('users', {
+  title: 'Users',
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.consolidate.htmling" id="apidoc.module.consolidate.htmling">module consolidate.htmling</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.consolidate.htmling.htmling" id="apidoc.element.consolidate.htmling.htmling">
+        function <span class="apidocSignatureSpan">consolidate.</span>htmling
+        <span class="apidocSignatureSpan">(path, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">htmling = function (path, options, fn){
+  options.filename = path;
+
+  return promisify(fn, function(fn) {
+    readPartials(path, options, function (err) {
+      if (err) return fn(err);
+      if (cache(options)) {
+        exports[name].render('', options, fn);
+      } else {
+        read(path, options, function(err, str){
+          if (err) return fn(err);
+          exports[name].render(str, options, fn);
+        });
+      }
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.consolidate.htmling.render" id="apidoc.element.consolidate.htmling.render">
+        function <span class="apidocSignatureSpan">consolidate.htmling.</span>render
+        <span class="apidocSignatureSpan">(str, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">render = function (str, options, fn) {
+  return promisify(fn, function (fn) {
+    var engine = requires.htmling || (requires.htmling = require('htmling'));
+    try {
+      var tmpl = cache(options) || cache(options, engine.string(str));
+      fn(null, tmpl.render(options));
+    } catch (err) {
+      fn(err);
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+var users = [];
+users.push({ name: 'tobi' });
+users.push({ name: 'loki' });
+users.push({ name: 'jane' });
+
+app.get('/', function(req, res){
+res.<span class="apidocCodeKeywordSpan">render</span>('index', {
+  title: 'Consolidate.js'
+});
+});
+
+app.get('/users', function(req, res){
+res.render('users', {
+  title: 'Users',
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.consolidate.jade" id="apidoc.module.consolidate.jade">module consolidate.jade</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.consolidate.jade.jade" id="apidoc.element.consolidate.jade.jade">
+        function <span class="apidocSignatureSpan">consolidate.</span>jade
+        <span class="apidocSignatureSpan">(path, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">jade = function (path, options, fn){
+  return promisify(fn, function (fn) {
+    var engine = requires.jade;
+    if (!engine) {
+      try {
+        engine = requires.jade = require('jade');
+      } catch (err) {
+        try {
+          engine = requires.jade = require('then-jade');
+        } catch (otherError) {
+          throw err;
+        }
+      }
+    }
+
+    try {
+      var tmpl = cache(options) || cache(options, engine.compileFile(path, options));
+      fn(null, tmpl(options));
+    } catch (err) {
+      fn(err);
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.consolidate.jade.render" id="apidoc.element.consolidate.jade.render">
+        function <span class="apidocSignatureSpan">consolidate.jade.</span>render
+        <span class="apidocSignatureSpan">(str, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">render = function (str, options, fn){
+  return promisify(fn, function (fn) {
+    var engine = requires.jade;
+    if (!engine) {
+      try {
+        engine = requires.jade = require('jade');
+      } catch (err) {
+        try {
+          engine = requires.jade = require('then-jade');
+        } catch (otherError) {
+          throw err;
+        }
+      }
+    }
+
+    try {
+      var tmpl = cache(options) || cache(options, engine.compile(str, options));
+      fn(null, tmpl(options));
+    } catch (err) {
+      fn(err);
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+var users = [];
+users.push({ name: 'tobi' });
+users.push({ name: 'loki' });
+users.push({ name: 'jane' });
+
+app.get('/', function(req, res){
+res.<span class="apidocCodeKeywordSpan">render</span>('index', {
+  title: 'Consolidate.js'
+});
+});
+
+app.get('/users', function(req, res){
+res.render('users', {
+  title: 'Users',
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.consolidate.jazz" id="apidoc.module.consolidate.jazz">module consolidate.jazz</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.consolidate.jazz.jazz" id="apidoc.element.consolidate.jazz.jazz">
+        function <span class="apidocSignatureSpan">consolidate.</span>jazz
+        <span class="apidocSignatureSpan">(path, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">jazz = function (path, options, fn){
+  options.filename = path;
+
+  return promisify(fn, function(fn) {
+    readPartials(path, options, function (err) {
+      if (err) return fn(err);
+      if (cache(options)) {
+        exports[name].render('', options, fn);
+      } else {
+        read(path, options, function(err, str){
+          if (err) return fn(err);
+          exports[name].render(str, options, fn);
+        });
+      }
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.consolidate.jazz.render" id="apidoc.element.consolidate.jazz.render">
+        function <span class="apidocSignatureSpan">consolidate.jazz.</span>render
+        <span class="apidocSignatureSpan">(str, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">render = function (str, options, fn){
+  return promisify(fn, function(fn) {
+    var engine = requires.jazz || (requires.jazz = require('jazz'));
+    try {
+      var tmpl = cache(options) || cache(options, engine.compile(str, options));
+      tmpl.eval(options, function(str){
+        fn(null, str);
+      });
+    } catch (err) {
+      fn(err);
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+var users = [];
+users.push({ name: 'tobi' });
+users.push({ name: 'loki' });
+users.push({ name: 'jane' });
+
+app.get('/', function(req, res){
+res.<span class="apidocCodeKeywordSpan">render</span>('index', {
+  title: 'Consolidate.js'
+});
+});
+
+app.get('/users', function(req, res){
+res.render('users', {
+  title: 'Users',
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.consolidate.jqtpl" id="apidoc.module.consolidate.jqtpl">module consolidate.jqtpl</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.consolidate.jqtpl.jqtpl" id="apidoc.element.consolidate.jqtpl.jqtpl">
+        function <span class="apidocSignatureSpan">consolidate.</span>jqtpl
+        <span class="apidocSignatureSpan">(path, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">jqtpl = function (path, options, fn){
+  options.filename = path;
+
+  return promisify(fn, function(fn) {
+    readPartials(path, options, function (err) {
+      if (err) return fn(err);
+      if (cache(options)) {
+        exports[name].render('', options, fn);
+      } else {
+        read(path, options, function(err, str){
+          if (err) return fn(err);
+          exports[name].render(str, options, fn);
+        });
+      }
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.consolidate.jqtpl.render" id="apidoc.element.consolidate.jqtpl.render">
+        function <span class="apidocSignatureSpan">consolidate.jqtpl.</span>render
+        <span class="apidocSignatureSpan">(str, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">render = function (str, options, fn){
+  return promisify(fn, function(fn) {
+    var engine = requires.jqtpl || (requires.jqtpl = require('jqtpl'));
+    try {
+      engine.template(str, str);
+      fn(null, engine.tmpl(str, options));
+    } catch (err) {
+      fn(err);
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+var users = [];
+users.push({ name: 'tobi' });
+users.push({ name: 'loki' });
+users.push({ name: 'jane' });
+
+app.get('/', function(req, res){
+res.<span class="apidocCodeKeywordSpan">render</span>('index', {
+  title: 'Consolidate.js'
+});
+});
+
+app.get('/users', function(req, res){
+res.render('users', {
+  title: 'Users',
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.consolidate.just" id="apidoc.module.consolidate.just">module consolidate.just</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.consolidate.just.just" id="apidoc.element.consolidate.just.just">
+        function <span class="apidocSignatureSpan">consolidate.</span>just
+        <span class="apidocSignatureSpan">(path, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">just = function (path, options, fn){
+  return promisify(fn, function(fn) {
+    var engine = requires.just;
+    if (!engine) {
+      var JUST = require('just');
+      engine = requires.just = new JUST();
+    }
+    engine.configure({ useCache: options.cache });
+    engine.render(path, options, fn);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.consolidate.just.render" id="apidoc.element.consolidate.just.render">
+        function <span class="apidocSignatureSpan">consolidate.just.</span>render
+        <span class="apidocSignatureSpan">(str, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">render = function (str, options, fn){
+  return promisify(fn, function (fn) {
+    var JUST = require('just');
+    var engine = new JUST({ root: { page: str }});
+    engine.render('page', options, fn);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+var users = [];
+users.push({ name: 'tobi' });
+users.push({ name: 'loki' });
+users.push({ name: 'jane' });
+
+app.get('/', function(req, res){
+res.<span class="apidocCodeKeywordSpan">render</span>('index', {
+  title: 'Consolidate.js'
+});
+});
+
+app.get('/users', function(req, res){
+res.render('users', {
+  title: 'Users',
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.consolidate.liquid" id="apidoc.module.consolidate.liquid">module consolidate.liquid</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.consolidate.liquid.liquid" id="apidoc.element.consolidate.liquid.liquid">
+        function <span class="apidocSignatureSpan">consolidate.</span>liquid
+        <span class="apidocSignatureSpan">(path, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">liquid = function (path, options, fn){
+  options.filename = path;
+
+  return promisify(fn, function(fn) {
+    readPartials(path, options, function (err) {
+      if (err) return fn(err);
+      if (cache(options)) {
+        exports[name].render('', options, fn);
+      } else {
+        read(path, options, function(err, str){
+          if (err) return fn(err);
+          exports[name].render(str, options, fn);
+        });
+      }
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.consolidate.liquid.render" id="apidoc.element.consolidate.liquid.render">
+        function <span class="apidocSignatureSpan">consolidate.liquid.</span>render
+        <span class="apidocSignatureSpan">(str, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">render = function (str, options, fn){
+  return promisify(fn, function (fn) {
+    var engine = requires.liquid || (requires.liquid = require('tinyliquid'));
+    try {
+      var context = engine.newContext();
+      var k;
+
+<span class="apidocCodeCommentSpan">      /**
+       * Note that there's a bug in the library that doesn't allow us to pass
+       * the locals to newContext(), hence looping through the keys:
+       */
+</span>
+      if (options.locals){
+        for (k in options.locals){
+          context.setLocals(k, options.locals[k]);
+        }
+        delete options.locals;
+      }
+
+      if (options.meta){
+        context.setLocals('page', options.meta);
+        delete options.meta;
+      }
+
+      /**
+       * Add any defined filters:
+       */
+
+      if (options.filters){
+        for (k in options.filters){
+          context.setFilter(k, options.filters[k]);
+        }
+        delete options.filters;
+      }
+
+      /**
+       * Set up a callback for the include directory:
+       */
+
+      var includeDir = options.includeDir || process.cwd();
+
+      context.onInclude(function (name, callback) {
+        var extname = path.extname(name) ? '' : '.liquid';
+        var filename = path.resolve(includeDir, name + extname);
+
+        fs.readFile(filename, {encoding: 'utf8'}, function (err, data){
+          if (err) return callback(err);
+          callback(null, engine.parse(data));
+        });
+      });
+      delete options.includeDir;
+
+      /**
+       * The custom tag functions need to have their results pushed back
+       * through the parser, so set up a shim before calling the provided
+       * callback:
+       */
+
+      var compileOptions = {
+        customTags: {}
+      };
+
+      if (options.customTags){
+        var tagFunctions = options.customTags;
+
+        for (k in options.customTags){
+          /*Tell jshint there's no problem with having this function in the loop */
+          /*jshint -W083 */
+          compileOptions.customTags[k] = function (context, name, body){
+            var tpl = tagFunctions[name](body.trim());
+            context.astStack.push(engine.parse(tpl));
+          };
+          /*jshint +W083 */
+        }
+        delete options.customTags;
+      }
+
+      /**
+       * Now anything left in `options` becomes a local:
+       */
+
+      for (k in options){
+        context.setLocals(k, options[k]);
+      }
+
+      /**
+       * Finally, execute the template:
+       */
+
+      var tmpl = cache(context) || cache(context, engine.compile(str, compileOptions));
+      tmpl(context, fn);
+    } catch (err) {
+      fn(err);
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+var users = [];
+users.push({ name: 'tobi' });
+users.push({ name: 'loki' });
+users.push({ name: 'jane' });
+
+app.get('/', function(req, res){
+res.<span class="apidocCodeKeywordSpan">render</span>('index', {
+  title: 'Consolidate.js'
+});
+});
+
+app.get('/users', function(req, res){
+res.render('users', {
+  title: 'Users',
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.consolidate.liquor" id="apidoc.module.consolidate.liquor">module consolidate.liquor</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.consolidate.liquor.liquor" id="apidoc.element.consolidate.liquor.liquor">
+        function <span class="apidocSignatureSpan">consolidate.</span>liquor
+        <span class="apidocSignatureSpan">(path, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">liquor = function (path, options, fn){
+  options.filename = path;
+
+  return promisify(fn, function(fn) {
+    readPartials(path, options, function (err) {
+      if (err) return fn(err);
+      if (cache(options)) {
+        exports[name].render('', options, fn);
+      } else {
+        read(path, options, function(err, str){
+          if (err) return fn(err);
+          exports[name].render(str, options, fn);
+        });
+      }
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.consolidate.liquor.render" id="apidoc.element.consolidate.liquor.render">
+        function <span class="apidocSignatureSpan">consolidate.liquor.</span>render
+        <span class="apidocSignatureSpan">(str, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">render = function (str, options, fn){
+  return promisify(fn, function(fn) {
+    var engine = requires.liquor || (requires.liquor = require('liquor'));
+    try {
+      var tmpl = cache(options) || cache(options, engine.compile(str, options));
+      fn(null, tmpl(options));
+    } catch (err) {
+      fn(err);
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+var users = [];
+users.push({ name: 'tobi' });
+users.push({ name: 'loki' });
+users.push({ name: 'jane' });
+
+app.get('/', function(req, res){
+res.<span class="apidocCodeKeywordSpan">render</span>('index', {
+  title: 'Consolidate.js'
+});
+});
+
+app.get('/users', function(req, res){
+res.render('users', {
+  title: 'Users',
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.consolidate.lodash" id="apidoc.module.consolidate.lodash">module consolidate.lodash</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.consolidate.lodash.lodash" id="apidoc.element.consolidate.lodash.lodash">
+        function <span class="apidocSignatureSpan">consolidate.</span>lodash
+        <span class="apidocSignatureSpan">(path, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">lodash = function (path, options, fn){
+  options.filename = path;
+
+  return promisify(fn, function(fn) {
+    readPartials(path, options, function (err) {
+      if (err) return fn(err);
+      if (cache(options)) {
+        exports[name].render('', options, fn);
+      } else {
+        read(path, options, function(err, str){
+          if (err) return fn(err);
+          exports[name].render(str, options, fn);
+        });
+      }
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.consolidate.lodash.render" id="apidoc.element.consolidate.lodash.render">
+        function <span class="apidocSignatureSpan">consolidate.lodash.</span>render
+        <span class="apidocSignatureSpan">(str, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">render = function (str, options, fn) {
+  return promisify(fn, function (fn) {
+    var engine = requires.lodash || (requires.lodash = require('lodash'));
+    try {
+      var tmpl = cache(options) || cache(options, engine.template(str, options));
+      fn(null, tmpl(options).replace(/\n$/, ''));
+    } catch (err) {
+      fn(err);
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+var users = [];
+users.push({ name: 'tobi' });
+users.push({ name: 'loki' });
+users.push({ name: 'jane' });
+
+app.get('/', function(req, res){
+res.<span class="apidocCodeKeywordSpan">render</span>('index', {
+  title: 'Consolidate.js'
+});
+});
+
+app.get('/users', function(req, res){
+res.render('users', {
+  title: 'Users',
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.consolidate.marko" id="apidoc.module.consolidate.marko">module consolidate.marko</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.consolidate.marko.marko" id="apidoc.element.consolidate.marko.marko">
+        function <span class="apidocSignatureSpan">consolidate.</span>marko
+        <span class="apidocSignatureSpan">(path, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">marko = function (path, options, fn){
+  return promisify(fn, function (fn) {
+    var engine = requires.marko || (requires.marko = require('marko'));
+    options.writeToDisk = !!options.cache;
+
+    try {
+      var tmpl = cache(options) || cache(options, engine.load(path, options));
+      tmpl.render(options, fn)
+    } catch (err) {
+      fn(err);
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.consolidate.marko.render" id="apidoc.element.consolidate.marko.render">
+        function <span class="apidocSignatureSpan">consolidate.marko.</span>render
+        <span class="apidocSignatureSpan">(str, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">render = function (str, options, fn) {
+  return promisify(fn, function (fn) {
+    var engine = requires.marko || (requires.marko = require('marko'));
+    options.writeToDisk = !!options.cache;
+
+    try {
+      var tmpl = cache(options) || cache(options, engine.load('string.marko', str, options));
+      tmpl.render(options, fn)
+    } catch (err) {
+      fn(err);
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+var users = [];
+users.push({ name: 'tobi' });
+users.push({ name: 'loki' });
+users.push({ name: 'jane' });
+
+app.get('/', function(req, res){
+res.<span class="apidocCodeKeywordSpan">render</span>('index', {
+  title: 'Consolidate.js'
+});
+});
+
+app.get('/users', function(req, res){
+res.render('users', {
+  title: 'Users',
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.consolidate.mote" id="apidoc.module.consolidate.mote">module consolidate.mote</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.consolidate.mote.mote" id="apidoc.element.consolidate.mote.mote">
+        function <span class="apidocSignatureSpan">consolidate.</span>mote
+        <span class="apidocSignatureSpan">(path, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">mote = function (path, options, fn){
+  options.filename = path;
+
+  return promisify(fn, function(fn) {
+    readPartials(path, options, function (err) {
+      if (err) return fn(err);
+      if (cache(options)) {
+        exports[name].render('', options, fn);
+      } else {
+        read(path, options, function(err, str){
+          if (err) return fn(err);
+          exports[name].render(str, options, fn);
+        });
+      }
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.consolidate.mote.render" id="apidoc.element.consolidate.mote.render">
+        function <span class="apidocSignatureSpan">consolidate.mote.</span>render
+        <span class="apidocSignatureSpan">(str, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">render = function (str, options, fn){
+  return promisify(fn, function (fn) {
+    var engine = requires.mote || (requires.mote = require('mote'));
+    try {
+      var tmpl = cache(options) || cache(options, engine.compile(str));
+      fn(null, tmpl(options));
+    } catch (err) {
+      fn(err);
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+var users = [];
+users.push({ name: 'tobi' });
+users.push({ name: 'loki' });
+users.push({ name: 'jane' });
+
+app.get('/', function(req, res){
+res.<span class="apidocCodeKeywordSpan">render</span>('index', {
+  title: 'Consolidate.js'
+});
+});
+
+app.get('/users', function(req, res){
+res.render('users', {
+  title: 'Users',
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.consolidate.mustache" id="apidoc.module.consolidate.mustache">module consolidate.mustache</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.consolidate.mustache.mustache" id="apidoc.element.consolidate.mustache.mustache">
+        function <span class="apidocSignatureSpan">consolidate.</span>mustache
+        <span class="apidocSignatureSpan">(path, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">mustache = function (path, options, fn){
+  options.filename = path;
+
+  return promisify(fn, function(fn) {
+    readPartials(path, options, function (err) {
+      if (err) return fn(err);
+      if (cache(options)) {
+        exports[name].render('', options, fn);
+      } else {
+        read(path, options, function(err, str){
+          if (err) return fn(err);
+          exports[name].render(str, options, fn);
+        });
+      }
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.consolidate.mustache.render" id="apidoc.element.consolidate.mustache.render">
+        function <span class="apidocSignatureSpan">consolidate.mustache.</span>render
+        <span class="apidocSignatureSpan">(str, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">render = function (str, options, fn) {
+  return promisify(fn, function (fn) {
+    var engine = requires.mustache || (requires.mustache = require('mustache'));
+    try {
+      fn(null, engine.to_html(str, options, options.partials));
+    } catch (err) {
+      fn(err);
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+var users = [];
+users.push({ name: 'tobi' });
+users.push({ name: 'loki' });
+users.push({ name: 'jane' });
+
+app.get('/', function(req, res){
+res.<span class="apidocCodeKeywordSpan">render</span>('index', {
+  title: 'Consolidate.js'
+});
+});
+
+app.get('/users', function(req, res){
+res.render('users', {
+  title: 'Users',
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.consolidate.nunjucks" id="apidoc.module.consolidate.nunjucks">module consolidate.nunjucks</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.consolidate.nunjucks.nunjucks" id="apidoc.element.consolidate.nunjucks.nunjucks">
+        function <span class="apidocSignatureSpan">consolidate.</span>nunjucks
+        <span class="apidocSignatureSpan">(path, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">nunjucks = function (path, options, fn){
+  options.filename = path;
+
+  return promisify(fn, function(fn) {
+    readPartials(path, options, function (err) {
+      if (err) return fn(err);
+      if (cache(options)) {
+        exports[name].render('', options, fn);
+      } else {
+        read(path, options, function(err, str){
+          if (err) return fn(err);
+          exports[name].render(str, options, fn);
+        });
+      }
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.consolidate.nunjucks.render" id="apidoc.element.consolidate.nunjucks.render">
+        function <span class="apidocSignatureSpan">consolidate.nunjucks.</span>render
+        <span class="apidocSignatureSpan">(str, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">render = function (str, options, fn) {
+  return promisify(fn, function (fn) {
+
+    try {
+
+      var engine = options.nunjucksEnv || requires.nunjucks || (requires.nunjucks = require('nunjucks'));
+
+      var env = engine;
+
+      // deprecated fallback support for express
+      // &lt;https://github.com/tj/consolidate.js/pull/152&gt;
+      // &lt;https://github.com/tj/consolidate.js/pull/224&gt;
+      if (options.settings &amp;&amp; options.settings.views)
+        env = engine.configure(options.settings.views);
+      else if (options.nunjucks &amp;&amp; options.nunjucks.configure)
+        env = engine.configure.apply(engine, options.nunjucks.configure);
+
+      //
+      // because `renderString` does not initiate loaders
+      // we must manually create a loader for it based off
+      // either `options.settings.views` or `options.nunjucks` or `options.nunjucks.root`
+      //
+      // &lt;https://github.com/mozilla/nunjucks/issues/730&gt;
+      // &lt;https://github.com/crocodilejs/node-email-templates/issues/182&gt;
+      //
+
+      //
+      // note that the below code didn't work nor make sense before
+      // because loaders should take different options from rendering
+      //
+
+<span class="apidocCodeCommentSpan">      /*
+      var loader = options.loader;
+      if (loader) {
+        var env = new engine.Environment(new loader(options));
+        env.renderString(str, options, fn);
+      } else {
+        engine.renderString(str, options, fn);
+      }
+      */
+</span>
+      // so instead we simply check if we passed a custom loader
+      // otherwise we create a simple file based loader
+      if (options.loader) {
+        env = new engine.Environment(options.loader);
+      } else if (options.settings &amp;&amp; options.settings.views) {
+        env = new engine.Environment(
+          new engine.FileSystemLoader(options.settings.views)
+        );
+      } else if (options.nunjucks &amp;&amp; options.nunjucks.loader) {
+        if (typeof options.nunjucks.loader === 'string')
+          env = new engine.Environment(new engine.FileSystemLoader(options.nunjucks.loader));
+        else
+          env = new engine.Environment(
+            new engine.FileSystemLoader(
+              options.nunjucks.loader[0],
+              options.nunjucks.loader[1]
+            )
+          );
+      }
+
+      env.renderString(str, options, fn);
+
+    } catch (err) {
+      throw fn(err);
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+var users = [];
+users.push({ name: 'tobi' });
+users.push({ name: 'loki' });
+users.push({ name: 'jane' });
+
+app.get('/', function(req, res){
+res.<span class="apidocCodeKeywordSpan">render</span>('index', {
+  title: 'Consolidate.js'
+});
+});
+
+app.get('/users', function(req, res){
+res.render('users', {
+  title: 'Users',
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.consolidate.pug" id="apidoc.module.consolidate.pug">module consolidate.pug</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.consolidate.pug.pug" id="apidoc.element.consolidate.pug.pug">
+        function <span class="apidocSignatureSpan">consolidate.</span>pug
+        <span class="apidocSignatureSpan">(path, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">pug = function (path, options, fn){
+  return promisify(fn, function (fn) {
+    var engine = requires.pug;
+    if (!engine) {
+      try {
+        engine = requires.pug = require('pug');
+      } catch (err) {
+        try {
+          engine = requires.pug = require('then-pug');
+        } catch (otherError) {
+          throw err;
+        }
+      }
+    }
+
+    try {
+      var tmpl = cache(options) || cache(options, engine.compileFile(path, options));
+      fn(null, tmpl(options));
+    } catch (err) {
+      fn(err);
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.consolidate.pug.render" id="apidoc.element.consolidate.pug.render">
+        function <span class="apidocSignatureSpan">consolidate.pug.</span>render
+        <span class="apidocSignatureSpan">(str, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">render = function (str, options, fn){
+  return promisify(fn, function (fn) {
+    var engine = requires.pug;
+    if (!engine) {
+      try {
+        engine = requires.pug = require('pug');
+      } catch (err) {
+        try {
+          engine = requires.pug = require('then-pug');
+        } catch (otherError) {
+          throw err;
+        }
+      }
+    }
+
+    try {
+      var tmpl = cache(options) || cache(options, engine.compile(str, options));
+      fn(null, tmpl(options));
+    } catch (err) {
+      fn(err);
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+var users = [];
+users.push({ name: 'tobi' });
+users.push({ name: 'loki' });
+users.push({ name: 'jane' });
+
+app.get('/', function(req, res){
+res.<span class="apidocCodeKeywordSpan">render</span>('index', {
+  title: 'Consolidate.js'
+});
+});
+
+app.get('/users', function(req, res){
+res.render('users', {
+  title: 'Users',
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.consolidate.qejs" id="apidoc.module.consolidate.qejs">module consolidate.qejs</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.consolidate.qejs.qejs" id="apidoc.element.consolidate.qejs.qejs">
+        function <span class="apidocSignatureSpan">consolidate.</span>qejs
+        <span class="apidocSignatureSpan">(path, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">qejs = function (path, options, fn){
+  options.filename = path;
+
+  return promisify(fn, function(fn) {
+    readPartials(path, options, function (err) {
+      if (err) return fn(err);
+      if (cache(options)) {
+        exports[name].render('', options, fn);
+      } else {
+        read(path, options, function(err, str){
+          if (err) return fn(err);
+          exports[name].render(str, options, fn);
+        });
+      }
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.consolidate.qejs.render" id="apidoc.element.consolidate.qejs.render">
+        function <span class="apidocSignatureSpan">consolidate.qejs.</span>render
+        <span class="apidocSignatureSpan">(str, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">render = function (str, options, fn) {
+  return promisify(fn, function (fn) {
+    try {
+      var engine = requires.qejs || (requires.qejs = require('qejs'));
+      engine.render(str, options).then(function (result) {
+        fn(null, result);
+      }, function (err) {
+        fn(err);
+      }).done();
+    } catch (err) {
+      fn(err);
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+var users = [];
+users.push({ name: 'tobi' });
+users.push({ name: 'loki' });
+users.push({ name: 'jane' });
+
+app.get('/', function(req, res){
+res.<span class="apidocCodeKeywordSpan">render</span>('index', {
+  title: 'Consolidate.js'
+});
+});
+
+app.get('/users', function(req, res){
+res.render('users', {
+  title: 'Users',
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.consolidate.ractive" id="apidoc.module.consolidate.ractive">module consolidate.ractive</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.consolidate.ractive.ractive" id="apidoc.element.consolidate.ractive.ractive">
+        function <span class="apidocSignatureSpan">consolidate.</span>ractive
+        <span class="apidocSignatureSpan">(path, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">ractive = function (path, options, fn){
+  options.filename = path;
+
+  return promisify(fn, function(fn) {
+    readPartials(path, options, function (err) {
+      if (err) return fn(err);
+      if (cache(options)) {
+        exports[name].render('', options, fn);
+      } else {
+        read(path, options, function(err, str){
+          if (err) return fn(err);
+          exports[name].render(str, options, fn);
+        });
+      }
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.consolidate.ractive.render" id="apidoc.element.consolidate.ractive.render">
+        function <span class="apidocSignatureSpan">consolidate.ractive.</span>render
+        <span class="apidocSignatureSpan">(str, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">render = function (str, options, fn){
+  return promisify(fn, function (fn) {
+    var engine = requires.ractive || (requires.ractive = require('ractive'));
+
+    var template = cache(options) || cache(options, engine.parse(str));
+    options.template = template;
+
+    if (options.data === null || options.data === undefined)
+    {
+      var extend = (requires.extend || (requires.extend = require('util')._extend));
+
+      // Shallow clone the options object
+      options.data = extend({}, options);
+
+      // Remove consolidate-specific properties from the clone
+      var i, length;
+      var properties = ["template", "filename", "cache", "partials"];
+      for (i = 0, length = properties.length; i &lt; length; i++) {
+        var property = properties[i];
+        delete options.data[property];
+      }
+    }
+
+    try {
+      fn(null, new engine(options).toHTML());
+    } catch (err) {
+      fn(err);
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+var users = [];
+users.push({ name: 'tobi' });
+users.push({ name: 'loki' });
+users.push({ name: 'jane' });
+
+app.get('/', function(req, res){
+res.<span class="apidocCodeKeywordSpan">render</span>('index', {
+  title: 'Consolidate.js'
+});
+});
+
+app.get('/users', function(req, res){
+res.render('users', {
+  title: 'Users',
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.consolidate.react" id="apidoc.module.consolidate.react">module consolidate.react</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.consolidate.react.react" id="apidoc.element.consolidate.react.react">
+        function <span class="apidocSignatureSpan">consolidate.</span>react
+        <span class="apidocSignatureSpan">(str, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">react = function (str, options, fn) {
+  return promisify(fn, function(fn) {
+    // React Import
+    var ReactDOM = requires.ReactDOM || (requires.ReactDOM = require('react-dom/server'));
+    var react = requires.react || (requires.react = require('react'));
+
+    // Assign HTML Base
+    var base = options.base;
+    delete options.base;
+
+    var enableCache = options.cache;
+    delete options.cache;
+
+    var isNonStatic = options.isNonStatic;
+    delete options.isNonStatic;
+
+    // Start Conversion
+    try {
+
+      var Code;
+      var Factory;
+
+      var baseStr;
+      var content;
+      var parsed;
+
+      if (!cache(options)){
+        // Parsing
+        Code = (type === 'path') ? require(resolve(str)) : requireReactString(str);
+        Factory = cache(options, react.createFactory(Code));
+
+      } else {
+        Factory = cache(options);
+      }
+
+      parsed = new Factory(options);
+      content = (isNonStatic) ? ReactDOM.renderToString(parsed) : ReactDOM.renderToStaticMarkup(parsed);
+
+      if (base){
+        baseStr = readCache[str] || fs.readFileSync(resolve(base), 'utf8');
+
+        if (enableCache){
+          readCache[str] = baseStr;
+        }
+
+        options.content = content;
+        content = reactBaseTmpl(baseStr, options);
+      }
+
+      fn(null, content);
+
+    } catch (err) {
+      fn(err);
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.consolidate.react.render" id="apidoc.element.consolidate.react.render">
+        function <span class="apidocSignatureSpan">consolidate.react.</span>render
+        <span class="apidocSignatureSpan">(str, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">render = function (str, options, fn) {
+  return promisify(fn, function(fn) {
+    // React Import
+    var ReactDOM = requires.ReactDOM || (requires.ReactDOM = require('react-dom/server'));
+    var react = requires.react || (requires.react = require('react'));
+
+    // Assign HTML Base
+    var base = options.base;
+    delete options.base;
+
+    var enableCache = options.cache;
+    delete options.cache;
+
+    var isNonStatic = options.isNonStatic;
+    delete options.isNonStatic;
+
+    // Start Conversion
+    try {
+
+      var Code;
+      var Factory;
+
+      var baseStr;
+      var content;
+      var parsed;
+
+      if (!cache(options)){
+        // Parsing
+        Code = (type === 'path') ? require(resolve(str)) : requireReactString(str);
+        Factory = cache(options, react.createFactory(Code));
+
+      } else {
+        Factory = cache(options);
+      }
+
+      parsed = new Factory(options);
+      content = (isNonStatic) ? ReactDOM.renderToString(parsed) : ReactDOM.renderToStaticMarkup(parsed);
+
+      if (base){
+        baseStr = readCache[str] || fs.readFileSync(resolve(base), 'utf8');
+
+        if (enableCache){
+          readCache[str] = baseStr;
+        }
+
+        options.content = content;
+        content = reactBaseTmpl(baseStr, options);
+      }
+
+      fn(null, content);
+
+    } catch (err) {
+      fn(err);
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+var users = [];
+users.push({ name: 'tobi' });
+users.push({ name: 'loki' });
+users.push({ name: 'jane' });
+
+app.get('/', function(req, res){
+res.<span class="apidocCodeKeywordSpan">render</span>('index', {
+  title: 'Consolidate.js'
+});
+});
+
+app.get('/users', function(req, res){
+res.render('users', {
+  title: 'Users',
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.consolidate.slm" id="apidoc.module.consolidate.slm">module consolidate.slm</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.consolidate.slm.slm" id="apidoc.element.consolidate.slm.slm">
+        function <span class="apidocSignatureSpan">consolidate.</span>slm
+        <span class="apidocSignatureSpan">(path, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">slm = function (path, options, fn){
+  options.filename = path;
+
+  return promisify(fn, function(fn) {
+    readPartials(path, options, function (err) {
+      if (err) return fn(err);
+      if (cache(options)) {
+        exports[name].render('', options, fn);
+      } else {
+        read(path, options, function(err, str){
+          if (err) return fn(err);
+          exports[name].render(str, options, fn);
+        });
+      }
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.consolidate.slm.render" id="apidoc.element.consolidate.slm.render">
+        function <span class="apidocSignatureSpan">consolidate.slm.</span>render
+        <span class="apidocSignatureSpan">(str, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">render = function (str, options, fn) {
+  return promisify(fn, function (fn) {
+    var engine = requires.slm || (requires.slm = require('slm'));
+
+    try {
+      var tmpl = cache(options) || cache(options, engine.compile(str, options));
+      fn(null, tmpl(options));
+    } catch (err) {
+      fn(err);
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+var users = [];
+users.push({ name: 'tobi' });
+users.push({ name: 'loki' });
+users.push({ name: 'jane' });
+
+app.get('/', function(req, res){
+res.<span class="apidocCodeKeywordSpan">render</span>('index', {
+  title: 'Consolidate.js'
+});
+});
+
+app.get('/users', function(req, res){
+res.render('users', {
+  title: 'Users',
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.consolidate.swig" id="apidoc.module.consolidate.swig">module consolidate.swig</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.consolidate.swig.swig" id="apidoc.element.consolidate.swig.swig">
+        function <span class="apidocSignatureSpan">consolidate.</span>swig
+        <span class="apidocSignatureSpan">(path, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">swig = function (path, options, fn){
+  options.filename = path;
+
+  return promisify(fn, function(fn) {
+    readPartials(path, options, function (err) {
+      if (err) return fn(err);
+      if (cache(options)) {
+        exports[name].render('', options, fn);
+      } else {
+        read(path, options, function(err, str){
+          if (err) return fn(err);
+          exports[name].render(str, options, fn);
+        });
+      }
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+All templates supported by this library may be rendered using the signature `(path[, locals], callback)` as shown below, which happens
+ to be the signature that Express 3.x supports so any of these engines may be used within Express.
+
+__NOTE__: All this example code uses cons.swig for the swig template engine. Replace swig with whatever templating you are using
+. For example, use cons.hogan for hogan.js, cons.jade for jade, etc. `console.log(cons)` for the full list of identifiers.
+
+```js
+var cons = require('consolidate');
+cons.<span class="apidocCodeKeywordSpan">swig</span>('views/page.html', { user: 'tobi' }, function(err, html
+){
+if (err) throw err;
+console.log(html);
+});
+```
+
+Or without options / local variables:
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.consolidate.swig.render" id="apidoc.element.consolidate.swig.render">
+        function <span class="apidocSignatureSpan">consolidate.swig.</span>render
+        <span class="apidocSignatureSpan">(str, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">render = function (str, options, fn){
+  return promisify(fn, function(fn) {
+    var engine = requires.swig || (requires.swig = require('swig'));
+
+    try {
+      if(options.cache === true) options.cache = 'memory';
+      engine.setDefaults({ cache: options.cache });
+      var tmpl = cache(options) || cache(options, engine.compile(str, options));
+      fn(null, tmpl(options));
+    } catch (err) {
+      fn(err);
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+var users = [];
+users.push({ name: 'tobi' });
+users.push({ name: 'loki' });
+users.push({ name: 'jane' });
+
+app.get('/', function(req, res){
+res.<span class="apidocCodeKeywordSpan">render</span>('index', {
+  title: 'Consolidate.js'
+});
+});
+
+app.get('/users', function(req, res){
+res.render('users', {
+  title: 'Users',
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.consolidate.templayed" id="apidoc.module.consolidate.templayed">module consolidate.templayed</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.consolidate.templayed.templayed" id="apidoc.element.consolidate.templayed.templayed">
+        function <span class="apidocSignatureSpan">consolidate.</span>templayed
+        <span class="apidocSignatureSpan">(path, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">templayed = function (path, options, fn){
+  options.filename = path;
+
+  return promisify(fn, function(fn) {
+    readPartials(path, options, function (err) {
+      if (err) return fn(err);
+      if (cache(options)) {
+        exports[name].render('', options, fn);
+      } else {
+        read(path, options, function(err, str){
+          if (err) return fn(err);
+          exports[name].render(str, options, fn);
+        });
+      }
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.consolidate.templayed.render" id="apidoc.element.consolidate.templayed.render">
+        function <span class="apidocSignatureSpan">consolidate.templayed.</span>render
+        <span class="apidocSignatureSpan">(str, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">render = function (str, options, fn){
+  return promisify(fn, function (fn) {
+    var engine = requires.templayed || (requires.templayed = require('templayed'));
+    try {
+      var tmpl = cache(options) || cache(options, engine(str));
+      fn(null, tmpl(options));
+    } catch (err) {
+      fn(err);
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+var users = [];
+users.push({ name: 'tobi' });
+users.push({ name: 'loki' });
+users.push({ name: 'jane' });
+
+app.get('/', function(req, res){
+res.<span class="apidocCodeKeywordSpan">render</span>('index', {
+  title: 'Consolidate.js'
+});
+});
+
+app.get('/users', function(req, res){
+res.render('users', {
+  title: 'Users',
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.consolidate.toffee" id="apidoc.module.consolidate.toffee">module consolidate.toffee</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.consolidate.toffee.toffee" id="apidoc.element.consolidate.toffee.toffee">
+        function <span class="apidocSignatureSpan">consolidate.</span>toffee
+        <span class="apidocSignatureSpan">(path, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toffee = function (path, options, fn){
+  return promisify(fn, function (fn) {
+    var toffee = requires.toffee || (requires.toffee = require('toffee'));
+    toffee.__consolidate_engine_render(path, options, fn);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.consolidate.toffee.render" id="apidoc.element.consolidate.toffee.render">
+        function <span class="apidocSignatureSpan">consolidate.toffee.</span>render
+        <span class="apidocSignatureSpan">(str, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">render = function (str, options, fn) {
+  return promisify(fn, function (fn) {
+    var engine = requires.toffee || (requires.toffee = require('toffee'));
+    try {
+      engine.str_render(str, options,fn);
+    } catch (err) {
+      fn(err);
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+var users = [];
+users.push({ name: 'tobi' });
+users.push({ name: 'loki' });
+users.push({ name: 'jane' });
+
+app.get('/', function(req, res){
+res.<span class="apidocCodeKeywordSpan">render</span>('index', {
+  title: 'Consolidate.js'
+});
+});
+
+app.get('/users', function(req, res){
+res.render('users', {
+  title: 'Users',
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.consolidate.twig" id="apidoc.module.consolidate.twig">module consolidate.twig</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.consolidate.twig.twig" id="apidoc.element.consolidate.twig.twig">
+        function <span class="apidocSignatureSpan">consolidate.</span>twig
+        <span class="apidocSignatureSpan">(path, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">twig = function (path, options, fn){
+  options.filename = path;
+
+  return promisify(fn, function(fn) {
+    readPartials(path, options, function (err) {
+      if (err) return fn(err);
+      if (cache(options)) {
+        exports[name].render('', options, fn);
+      } else {
+        read(path, options, function(err, str){
+          if (err) return fn(err);
+          exports[name].render(str, options, fn);
+        });
+      }
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.consolidate.twig.render" id="apidoc.element.consolidate.twig.render">
+        function <span class="apidocSignatureSpan">consolidate.twig.</span>render
+        <span class="apidocSignatureSpan">(str, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">render = function (str, options, fn){
+  return promisify(fn, function(fn) {
+    var engine = requires.twig || (requires.twig = require('twig').twig);
+    var templateData = {
+      data: str
+    };
+    try {
+      var tmpl = cache(templateData) || cache(templateData, engine(templateData));
+      fn(null, tmpl.render(options));
+    } catch (err) {
+      fn(err);
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+var users = [];
+users.push({ name: 'tobi' });
+users.push({ name: 'loki' });
+users.push({ name: 'jane' });
+
+app.get('/', function(req, res){
+res.<span class="apidocCodeKeywordSpan">render</span>('index', {
+  title: 'Consolidate.js'
+});
+});
+
+app.get('/users', function(req, res){
+res.render('users', {
+  title: 'Users',
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.consolidate.underscore" id="apidoc.module.consolidate.underscore">module consolidate.underscore</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.consolidate.underscore.underscore" id="apidoc.element.consolidate.underscore.underscore">
+        function <span class="apidocSignatureSpan">consolidate.</span>underscore
+        <span class="apidocSignatureSpan">(path, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">underscore = function (path, options, fn){
+  options.filename = path;
+
+  return promisify(fn, function(fn) {
+    readPartials(path, options, function (err) {
+      if (err) return fn(err);
+      if (cache(options)) {
+        exports[name].render('', options, fn);
+      } else {
+        read(path, options, function(err, str){
+          if (err) return fn(err);
+          exports[name].render(str, options, fn);
+        });
+      }
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.consolidate.underscore.render" id="apidoc.element.consolidate.underscore.render">
+        function <span class="apidocSignatureSpan">consolidate.underscore.</span>render
+        <span class="apidocSignatureSpan">(str, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">render = function (str, options, fn) {
+  return promisify(fn, function(fn) {
+    var engine = requires.underscore || (requires.underscore = require('underscore'));
+    try {
+      var tmpl = cache(options) || cache(options, engine.template(str, null, options));
+      fn(null, tmpl(options).replace(/\n$/, ''));
+    } catch (err) {
+      fn(err);
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+var users = [];
+users.push({ name: 'tobi' });
+users.push({ name: 'loki' });
+users.push({ name: 'jane' });
+
+app.get('/', function(req, res){
+res.<span class="apidocCodeKeywordSpan">render</span>('index', {
+  title: 'Consolidate.js'
+});
+});
+
+app.get('/users', function(req, res){
+res.render('users', {
+  title: 'Users',
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.consolidate.vash" id="apidoc.module.consolidate.vash">module consolidate.vash</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.consolidate.vash.vash" id="apidoc.element.consolidate.vash.vash">
+        function <span class="apidocSignatureSpan">consolidate.</span>vash
+        <span class="apidocSignatureSpan">(path, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">vash = function (path, options, fn){
+  options.filename = path;
+
+  return promisify(fn, function(fn) {
+    readPartials(path, options, function (err) {
+      if (err) return fn(err);
+      if (cache(options)) {
+        exports[name].render('', options, fn);
+      } else {
+        read(path, options, function(err, str){
+          if (err) return fn(err);
+          exports[name].render(str, options, fn);
+        });
+      }
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.consolidate.vash.render" id="apidoc.element.consolidate.vash.render">
+        function <span class="apidocSignatureSpan">consolidate.vash.</span>render
+        <span class="apidocSignatureSpan">(str, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">render = function (str, options, fn) {
+  return promisify(fn, function(fn) {
+    var engine = requires.vash || (requires.vash = require('vash'));
+
+    try {
+      // helper system : https://github.com/kirbysayshi/vash#helper-system
+      if (options.helpers) {
+        for (var key in options.helpers) {
+          if (!options.helpers.hasOwnProperty(key) || typeof options.helpers[key] !== 'function') {
+            continue;
+          }
+          engine.helpers[key] = options.helpers[key];
+        }
+      }
+      var tmpl = cache(options) || cache(options, engine.compile(str, options));
+      fn(null, tmpl(options).replace(/\n$/, ''));
+    } catch (err) {
+      fn(err);
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+var users = [];
+users.push({ name: 'tobi' });
+users.push({ name: 'loki' });
+users.push({ name: 'jane' });
+
+app.get('/', function(req, res){
+res.<span class="apidocCodeKeywordSpan">render</span>('index', {
+  title: 'Consolidate.js'
+});
+});
+
+app.get('/users', function(req, res){
+res.render('users', {
+  title: 'Users',
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.consolidate.walrus" id="apidoc.module.consolidate.walrus">module consolidate.walrus</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.consolidate.walrus.walrus" id="apidoc.element.consolidate.walrus.walrus">
+        function <span class="apidocSignatureSpan">consolidate.</span>walrus
+        <span class="apidocSignatureSpan">(path, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">walrus = function (path, options, fn){
+  options.filename = path;
+
+  return promisify(fn, function(fn) {
+    readPartials(path, options, function (err) {
+      if (err) return fn(err);
+      if (cache(options)) {
+        exports[name].render('', options, fn);
+      } else {
+        read(path, options, function(err, str){
+          if (err) return fn(err);
+          exports[name].render(str, options, fn);
+        });
+      }
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.consolidate.walrus.render" id="apidoc.element.consolidate.walrus.render">
+        function <span class="apidocSignatureSpan">consolidate.walrus.</span>render
+        <span class="apidocSignatureSpan">(str, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">render = function (str, options, fn) {
+  return promisify(fn, function (fn) {
+    var engine = requires.walrus || (requires.walrus = require('walrus'));
+    try {
+      var tmpl = cache(options) || cache(options, engine.parse(str));
+      fn(null, tmpl.compile(options));
+    } catch (err) {
+      fn(err);
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+var users = [];
+users.push({ name: 'tobi' });
+users.push({ name: 'loki' });
+users.push({ name: 'jane' });
+
+app.get('/', function(req, res){
+res.<span class="apidocCodeKeywordSpan">render</span>('index', {
+  title: 'Consolidate.js'
+});
+});
+
+app.get('/users', function(req, res){
+res.render('users', {
+  title: 'Users',
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.consolidate.whiskers" id="apidoc.module.consolidate.whiskers">module consolidate.whiskers</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.consolidate.whiskers.whiskers" id="apidoc.element.consolidate.whiskers.whiskers">
+        function <span class="apidocSignatureSpan">consolidate.</span>whiskers
+        <span class="apidocSignatureSpan">(path, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">whiskers = function (path, options, fn){
+  return promisify(fn, function (fn) {
+    var engine = requires.whiskers || (requires.whiskers = require('whiskers'));
+    engine.__express(path, options, fn);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.consolidate.whiskers.render" id="apidoc.element.consolidate.whiskers.render">
+        function <span class="apidocSignatureSpan">consolidate.whiskers.</span>render
+        <span class="apidocSignatureSpan">(str, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">render = function (str, options, fn){
+  return promisify(fn, function(fn) {
+    var engine = requires.whiskers || (requires.whiskers = require('whiskers'));
+    try {
+      fn(null, engine.render(str, options));
+    } catch (err) {
+      fn(err);
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+var users = [];
+users.push({ name: 'tobi' });
+users.push({ name: 'loki' });
+users.push({ name: 'jane' });
+
+app.get('/', function(req, res){
+res.<span class="apidocCodeKeywordSpan">render</span>('index', {
+  title: 'Consolidate.js'
+});
+});
+
+app.get('/users', function(req, res){
+res.render('users', {
+  title: 'Users',
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
