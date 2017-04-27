@@ -1,6 +1,6 @@
 # npmdoc-consolidate
 
-#### api documentation for  [consolidate (v0.14.5)](https://github.com/visionmedia/consolidate.js#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-consolidate.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-consolidate) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-consolidate.svg)](https://travis-ci.org/npmdoc/node-npmdoc-consolidate)
+#### basic api documentation for  [consolidate (v0.14.5)](https://github.com/visionmedia/consolidate.js#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-consolidate.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-consolidate) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-consolidate.svg)](https://travis-ci.org/npmdoc/node-npmdoc-consolidate)
 
 #### Template engine consolidation library
 
@@ -119,7 +119,8 @@
     "scripts": {
         "test": "mocha"
     },
-    "version": "0.14.5"
+    "version": "0.14.5",
+    "bin": {}
 }
 ```
 
